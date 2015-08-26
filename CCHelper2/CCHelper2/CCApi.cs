@@ -102,6 +102,15 @@ namespace CCHelper2
             public string Nickname { get; set; }
 
             public Ranking() { }
+
+            public override string ToString()
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendFormat("{0}. {1} ({2})", this.Rank.ToString(), this.TeamId.ToString(), string.Format("{0:N2}", this.QualificationAverage));
+
+                return sb.ToString();
+            }
         }
 
         public class RankingsList

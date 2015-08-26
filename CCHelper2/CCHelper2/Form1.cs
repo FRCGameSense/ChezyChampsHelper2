@@ -973,5 +973,19 @@ namespace CCHelper2
             
         }
 
+        private void getRankingsTickerButton_Click(object sender, EventArgs e)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            List<CCApi.Ranking> rankings = ccApi.getRankings();
+
+            foreach (CCApi.Ranking rank in rankings)
+            {
+                sb.AppendFormat("{0}  ", rank.ToString());
+            }
+
+            tickerTextBox.Text = sb.ToString();
+        }
+
     }
 }
