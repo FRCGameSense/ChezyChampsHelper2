@@ -274,5 +274,17 @@ namespace CCHelper2.Properties {
                 this["apiUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string graphicsFolderLocation {
+            get {
+                return ((string)(this["graphicsFolderLocation"]));
+            }
+            set {
+                this["graphicsFolderLocation"] = value;
+            }
+        }
     }
 }

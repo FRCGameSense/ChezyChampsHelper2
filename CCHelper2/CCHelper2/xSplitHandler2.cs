@@ -50,10 +50,8 @@ namespace CCHelper2
         /// <param name="tag">string representing the tag to change</param>
         /// <param name="value">the string to set the tag to</param>
         /// <param name="useCDATA">no longer used.</param>
-        public void changeXMLTag(string tag, string value, bool useCDATA)
+        public void changeXMLTag(string tag, string value, bool useCDATA = false)
         {
-            useCDATA = false;
-
             string beginTag = " <" + tag + ">";
             string endTag = "</" + tag + ">";
 

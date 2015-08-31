@@ -27,6 +27,7 @@ namespace CCHelper2
         int liveTime;
         GSBotTbaCommunicator tba = new GSBotTbaCommunicator();
         CCApi ccApi = new CCApi();
+        List<CCApi.Match> ccMatches = new List<CCApi.Match>();
 
         public Form1()
         {
@@ -59,17 +60,19 @@ namespace CCHelper2
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ShutDown();
+            this.Close();
         }
 
-        public void ShutDown()
+        public void CleanUpBeforeClosing()
         {
-            twitch.Stop();
+            if (twitch != null)
+            {
+                twitch.Stop();
+            }
             timer1.Stop();
             Properties.Settings.Default.timerRunning = false;
             Properties.Settings.Default.currentTopic = 0;
             Properties.Settings.Default.Save();
-            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -198,8 +201,177 @@ namespace CCHelper2
                 case "tickerTab":
                     publishTicker();
                     break;
+                case "postMatchTab":
+                    publishPostMatchTab();
+                    break;
+                case "nextMatchTab":
+                    publishNextMatchTab();
+                    break;
+                case "bracketTab":
+                    publishBracket();
+                    break;
                 default:
                     break;
+            }
+        }
+
+        private void publishBracket()
+        {
+            xsHandler.loadTagsFromXML();
+
+            int[] qfScores = new int[8];
+            int[] sfScores = new int[4];
+            int[] fScores = new int[2];
+
+
+            foreach (DataGridViewRow row in bracketDataGridView.Rows)
+            {
+                if (row.Cells["DisplayName"].Value.ToString().StartsWith("QF1-1"))
+                {
+                    xsHandler.changeXMLTag("alliance1", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("alliance8", row.Cells["BlueAlliance"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("QF2-1"))
+                {
+                    xsHandler.changeXMLTag("alliance4", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("alliance5", row.Cells["BlueAlliance"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("QF3-1"))
+                {
+                    xsHandler.changeXMLTag("alliance2", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("alliance7", row.Cells["BlueAlliance"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("QF4-1"))
+                {
+                    xsHandler.changeXMLTag("alliance3", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("alliance6", row.Cells["BlueAlliance"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("SF1-1"))
+                {
+                    xsHandler.changeXMLTag("semi1RedAlliance", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("semi1RedAllianceNum", row.Cells["RedAllianceNum"].Value.ToString());
+                    xsHandler.changeXMLTag("semi1BlueAlliance", row.Cells["BlueAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("semi1BlueAllianceNum", row.Cells["BlueAllianceNum"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("SF2-1"))
+                {
+                    xsHandler.changeXMLTag("semi2RedAlliance", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("semi2RedAllianceNum", row.Cells["RedAllianceNum"].Value.ToString());
+                    xsHandler.changeXMLTag("semi2BlueAlliance", row.Cells["BlueAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("semi2BlueAllianceNum", row.Cells["BlueAllianceNum"].Value.ToString());
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("F-1"))
+                {
+                    xsHandler.changeXMLTag("finalsRedAlliance", row.Cells["RedAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("finalsRedAllianceNum", row.Cells["RedAllianceNum"].Value.ToString());
+                    xsHandler.changeXMLTag("finalsBlueAlliance", row.Cells["BlueAlliance"].Value.ToString());
+                    xsHandler.changeXMLTag("finalsBlueAllianceNum", row.Cells["BlueAllianceNum"].Value.ToString());
+                }
+
+                if (row.Cells["DisplayName"].Value.ToString().StartsWith("QF"))
+                {
+                    if (row.Cells["Winner"].Value.ToString() == "R")
+                    {
+                        int allianceNum = Convert.ToInt32(row.Cells["RedAllianceNum"].Value);
+                        qfScores[ allianceNum - 1] += 1;
+                    }
+                    else if (row.Cells["Winner"].Value.ToString() == "B")
+                    {
+                        int allianceNum = Convert.ToInt32(row.Cells["BlueAllianceNum"].Value);
+                        qfScores[allianceNum - 1] += 1;
+                    }
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("SF1"))
+                {
+                    if (row.Cells["Winner"].Value.ToString() == "R")
+                    {
+                        sfScores[0] += 1;
+                    }
+                    else if (row.Cells["Winner"].Value.ToString() == "B")
+                    {
+                        sfScores[1] += 1;
+                    }
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("SF2"))
+                {
+                    if (row.Cells["Winner"].Value.ToString() == "R")
+                    {
+                        sfScores[2] += 1;
+                    }
+                    else if (row.Cells["Winner"].Value.ToString() == "B")
+                    {
+                        sfScores[3] += 1;
+                    }
+                }
+                else if (row.Cells["DisplayName"].Value.ToString().StartsWith("F"))
+                {
+                    if (row.Cells["Winner"].Value.ToString() == "R")
+                    {
+                        fScores[0] += 1;
+                    }
+                    else if (row.Cells["Winner"].Value.ToString() == "B")
+                    {
+                        fScores[1] += 1;
+                    }
+                }
+            }
+
+            for (int i = 0; i < 8; i++)
+            {
+                xsHandler.changeXMLTag(string.Format("alliance{0}Score",i+1), qfScores[i].ToString());
+            }
+
+            xsHandler.changeXMLTag("semi1RedScore", sfScores[0].ToString());
+            xsHandler.changeXMLTag("semi1BlueScore", sfScores[1].ToString());
+            xsHandler.changeXMLTag("semi2RedScore", sfScores[2].ToString());
+            xsHandler.changeXMLTag("semi2BlueScore", sfScores[3].ToString());
+
+            xsHandler.changeXMLTag("finalsRedScore", fScores[0].ToString());
+            xsHandler.changeXMLTag("finalsBlueScore", fScores[1].ToString());
+
+            xsHandler.writeXMLFile();
+        }
+
+        private void publishPostMatchTab()
+        {
+            if (postMatchDataGridView.SelectedRows != null)
+            {
+                xsHandler.loadTagsFromXML();
+
+                DataGridViewRow selectedRow = postMatchDataGridView.SelectedRows[0];
+
+                foreach (DataGridViewCell cell in selectedRow.Cells)
+                {
+                    xsHandler.changeXMLTag("postMatch" + cell.OwningColumn.Name, cell.Value.ToString());
+                }
+
+                CCApi.Match selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString());
+
+                string stackImagePath = generateStacksImageFromMatch(selectedMatch);
+
+                xsHandler.changeXMLTag("postMatchStackImagePath", stackImagePath);
+
+                xsHandler.writeXMLFile();
+            }
+        }
+
+        private void publishNextMatchTab()
+        {
+            if (nextMatchDataGridView.SelectedRows != null)
+            {
+                xsHandler.loadTagsFromXML();
+
+                DataGridViewRow selectedRow = nextMatchDataGridView.SelectedRows[0];
+
+                foreach (DataGridViewCell cell in selectedRow.Cells)
+                {
+                    xsHandler.changeXMLTag("nextMatch" + cell.OwningColumn.Name, cell.Value.ToString());
+                }
+
+                
+
+
+                xsHandler.writeXMLFile();
             }
         }
 
@@ -207,7 +379,7 @@ namespace CCHelper2
         {
             xsHandler.loadTagsFromXML();
 
-            xsHandler.changeXMLTag("tickerText", tickerTextBox.Text, false);
+            xsHandler.changeXMLTag("rankings", tickerTextBox.Text);
 
             xsHandler.writeXMLFile();
         }
@@ -216,8 +388,8 @@ namespace CCHelper2
         {
             xsHandler.loadTagsFromXML();
 
-            xsHandler.changeXMLTag("splashTop", splashTopBox.Text, false);
-            xsHandler.changeXMLTag("splashBottom", splashBottomBox.Text, false);
+            xsHandler.changeXMLTag("splashTop", splashTopBox.Text);
+            xsHandler.changeXMLTag("splashBottom", splashBottomBox.Text);
 
             xsHandler.writeXMLFile();
         }
@@ -228,11 +400,11 @@ namespace CCHelper2
             {
                 xsHandler.loadTagsFromXML();
 
-                xsHandler.changeXMLTag("question", Properties.Settings.Default.PublishedQuestion, true);
+                xsHandler.changeXMLTag("question", Properties.Settings.Default.PublishedQuestion);
                 if (Properties.Settings.Default.PublishedAuthor == "")
-                    xsHandler.changeXMLTag("author", Properties.Settings.Default.PublishedAuthor, true);
+                    xsHandler.changeXMLTag("author", Properties.Settings.Default.PublishedAuthor);
                 else
-                    xsHandler.changeXMLTag("author", "-" + Properties.Settings.Default.PublishedAuthor, true);
+                    xsHandler.changeXMLTag("author", "-" + Properties.Settings.Default.PublishedAuthor);
 
                 xsHandler.writeXMLFile();
             }
@@ -258,12 +430,12 @@ namespace CCHelper2
 
             xsHandler.loadTagsFromXML();
 
-            xsHandler.changeXMLTag("host1", Properties.Settings.Default.Host1, true);
-            xsHandler.changeXMLTag("host2", Properties.Settings.Default.Host2, true);
-            xsHandler.changeXMLTag("host3", Properties.Settings.Default.Host3, true);
-            xsHandler.changeXMLTag("host4", Properties.Settings.Default.Host4, true);
-            xsHandler.changeXMLTag("guest1", Properties.Settings.Default.Guest1, true);
-            xsHandler.changeXMLTag("guest2", Properties.Settings.Default.Guest2, true);
+            xsHandler.changeXMLTag("caster1", Properties.Settings.Default.Host1);
+            xsHandler.changeXMLTag("caster2", Properties.Settings.Default.Host2);
+            xsHandler.changeXMLTag("host3", Properties.Settings.Default.Host3);
+            xsHandler.changeXMLTag("host4", Properties.Settings.Default.Host4);
+            xsHandler.changeXMLTag("guest1", Properties.Settings.Default.Guest1);
+            xsHandler.changeXMLTag("guest2", Properties.Settings.Default.Guest2);
 
             xsHandler.writeXMLFile();
         }
@@ -822,28 +994,9 @@ namespace CCHelper2
             xsHandler.writeXMLFile();
         }
 
-        private void getRankingsButton_Click(object sender, EventArgs e)
+        private string generateStacksImageFromMatch(CCApi.Match match)
         {
-            List<CCApi.Ranking> rankings = ccApi.getRankings();
-        }
-
-        private void getResultsButton_Click(object sender, EventArgs e)
-        {
-            List<CCApi.Match> matches = ccApi.getMatches("qualification");
-        }
-
-        private void generateStacksPicsButton_Click(object sender, EventArgs e)
-        {
-            List<CCApi.Match> matches = ccApi.getMatches("qualification");
-
-            CCApi.Match match = matches.Find(i => i.Id == Convert.ToInt16(matchNumberBox.Text));
-
-            generateStackImagesFromMatch(match);
-        }
-
-        private void generateStackImagesFromMatch(CCApi.Match match)
-        {
-            string picsFolder = @"C:\Users\ttremblay\Google Drive\GameSense\Shows\GameSense @\Graphics\New\Chezy Champs 2015";
+            string picsFolder = Properties.Settings.Default.graphicsFolderLocation;
             Bitmap allRedStacks = new Bitmap(525, 238);
             Bitmap allBlueStacks = new Bitmap(525, 238);
             Bitmap allStacks = new Bitmap(1200, 238);
@@ -879,7 +1032,11 @@ namespace CCHelper2
             Bitmap coopStack = generateCoopertitionStackImage(match);
             allStacksCanvas.DrawImage(coopStack, new Point(allStacks.Width / 2 - coopStack.Width / 2, allStacks.Height - coopStack.Height ));
 
-            allStacks.Save(Path.Combine(picsFolder, "stacks.png"), ImageFormat.Png);
+            string savePath = Path.Combine(picsFolder, "stacks.png");
+
+            allStacks.Save(savePath, ImageFormat.Png);
+
+            return savePath;
 
         }
 
@@ -977,7 +1134,7 @@ namespace CCHelper2
         {
             StringBuilder sb = new StringBuilder();
 
-            List<CCApi.Ranking> rankings = ccApi.getRankings();
+            List<CCApi.Ranking> rankings = CCApi.getRankings();
 
             foreach (CCApi.Ranking rank in rankings)
             {
@@ -985,6 +1142,98 @@ namespace CCHelper2
             }
 
             tickerTextBox.Text = sb.ToString();
+        }
+
+        private void nextMatchRefreshButton_Click(object sender, EventArgs e)
+        {
+            ccMatches = CCApi.getMatches("qualification");
+            ccMatches.AddRange(CCApi.getMatches("elimination"));
+
+            List<CCApi.MatchPreviewForDisplay> matchPreviews = new List<CCApi.MatchPreviewForDisplay>();
+
+            foreach (CCApi.Match m in ccMatches)
+            {
+                matchPreviews.Add(m.ToMatchPreviewForDisplay());
+            }
+
+            nextMatchDataGridView.DataSource = matchPreviews;
+
+            int latestMatchIndex = 0;
+
+            foreach (DataGridViewRow row in nextMatchDataGridView.Rows)
+            {
+                if (row.Cells["Status"].Value.ToString() == "complete")
+                {
+                    latestMatchIndex = row.Index;
+                    row.Selected = false;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            nextMatchDataGridView.Rows[latestMatchIndex+1].Selected = true;
+            this.nextMatchDataGridView.Columns["RedQA"].DefaultCellStyle.Format = "0.00";
+            this.nextMatchDataGridView.Columns["RedQA"].ValueType = typeof(Double);
+            this.nextMatchDataGridView.Columns["BlueQA"].DefaultCellStyle.Format = "0.00";
+            this.nextMatchDataGridView.Columns["BlueQA"].ValueType = typeof(Double);
+            nextMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void postMatchRefreshButton_Click(object sender, EventArgs e)
+        {
+            ccMatches = CCApi.getMatches("qualification");
+            ccMatches.AddRange(CCApi.getMatches("elimination"));
+            List<CCApi.MatchResultsForDisplay> simpleMatches = new List<CCApi.MatchResultsForDisplay>();
+
+            foreach (CCApi.Match m in ccMatches)
+            {
+                simpleMatches.Add(m.ToMatchResultsForDisplay());
+            }
+
+            postMatchDataGridView.DataSource = simpleMatches;
+
+            int latestMatchIndex = 0;
+
+            foreach (DataGridViewRow row in postMatchDataGridView.Rows)
+            {
+                if (row.Cells["Status"].Value.ToString() == "complete")
+                {
+                    latestMatchIndex = row.Index;
+                    row.Selected = false;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            postMatchDataGridView.Rows[latestMatchIndex].Selected = true;
+            this.postMatchDataGridView.Columns["BlueCanEfficiency"].DefaultCellStyle.Format = "0%";
+            this.postMatchDataGridView.Columns["BlueCanEfficiency"].ValueType = typeof(Double);
+            this.postMatchDataGridView.Columns["RedCanEfficiency"].DefaultCellStyle.Format = "0%";
+            this.postMatchDataGridView.Columns["RedCanEfficiency"].ValueType = typeof(Double);
+            postMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.CleanUpBeforeClosing();
+        }
+
+        private void bracketRefreshButton_Click(object sender, EventArgs e)
+        {
+            ccMatches = CCApi.getMatches("elimination");
+            CCApi.updateAlliances();
+            List<CCApi.BracketMatch> simpleMatches = new List<CCApi.BracketMatch>();
+
+            foreach (CCApi.Match m in ccMatches)
+            {
+                simpleMatches.Add(m.ToBracketMatch());
+            }
+
+            bracketDataGridView.DataSource = simpleMatches;
         }
 
     }

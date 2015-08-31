@@ -30,12 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,70 +61,74 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tickerTab = new System.Windows.Forms.TabPage();
-            this.getRankingsTickerButton = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dateTextBox = new System.Windows.Forms.TextBox();
-            this.nextWeeksResultsButton = new System.Windows.Forms.Button();
-            this.lastWeeksResultsButton = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
+            this.lastWeeksResultsButton = new System.Windows.Forms.Button();
+            this.nextWeeksResultsButton = new System.Windows.Forms.Button();
             this.tickerTextBox = new System.Windows.Forms.TextBox();
+            this.dateTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.getRankingsTickerButton = new System.Windows.Forms.Button();
             this.splashTab = new System.Windows.Forms.TabPage();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.splashBottomBox = new System.Windows.Forms.TextBox();
             this.splashTopBox = new System.Windows.Forms.TextBox();
+            this.splashBottomBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.questionsTab = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.clearQuestionButton = new System.Windows.Forms.Button();
-            this.clearQuestionsButton = new System.Windows.Forms.Button();
-            this.manualQuestionButton = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.twitterHashtagBox = new System.Windows.Forms.TextBox();
-            this.twitterGetQuestionsButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.twitchGetQuestionsButton = new System.Windows.Forms.Button();
-            this.castersTab = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Guest2ComboBox = new System.Windows.Forms.ComboBox();
-            this.Host1ComboBox = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Guest1ComboBox = new System.Windows.Forms.ComboBox();
-            this.Host2ComboBox = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Host4ComboBox = new System.Windows.Forms.ComboBox();
-            this.Host3ComboBox = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.rankingsTab = new System.Windows.Forms.TabPage();
-            this.getRankingsButton = new System.Windows.Forms.Button();
-            this.resultsTab = new System.Windows.Forms.TabPage();
-            this.matchNumberBox = new System.Windows.Forms.TextBox();
-            this.generateStacksPicsButton = new System.Windows.Forms.Button();
-            this.getResultsButton = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.twitterGetQuestionsButton = new System.Windows.Forms.Button();
+            this.twitterHashtagBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.manualQuestionButton = new System.Windows.Forms.Button();
+            this.clearQuestionsButton = new System.Windows.Forms.Button();
+            this.clearQuestionButton = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.postMatchTab = new System.Windows.Forms.TabPage();
+            this.postMatchRefreshButton = new System.Windows.Forms.Button();
+            this.postMatchDataGridView = new System.Windows.Forms.DataGridView();
             this.nextMatchTab = new System.Windows.Forms.TabPage();
             this.refreshMatchListButton = new System.Windows.Forms.Button();
+            this.nextMatchDataGridView = new System.Windows.Forms.DataGridView();
+            this.castersTab = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Host3ComboBox = new System.Windows.Forms.ComboBox();
+            this.Host4ComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Host2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Guest1ComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Host1ComboBox = new System.Windows.Forms.ComboBox();
+            this.Guest2ComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.bracketTab = new System.Windows.Forms.TabPage();
+            this.bracketDataGridView = new System.Windows.Forms.DataGridView();
+            this.bracketRefreshButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalTickerDataGridView)).BeginInit();
             this.tickerTab.SuspendLayout();
             this.splashTab.SuspendLayout();
             this.questionsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.postMatchTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.postMatchDataGridView)).BeginInit();
+            this.nextMatchTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nextMatchDataGridView)).BeginInit();
             this.castersTab.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.rankingsTab.SuspendLayout();
-            this.resultsTab.SuspendLayout();
-            this.nextMatchTab.SuspendLayout();
+            this.bracketTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bracketDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -140,7 +153,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -179,6 +192,7 @@
             // 
             // nextButton
             // 
+            this.nextButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nextButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
             this.nextButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
             this.nextButton.FlatAppearance.BorderSize = 0;
@@ -197,6 +211,8 @@
             // 
             // verticalTickerDataGridView
             // 
+            this.verticalTickerDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.verticalTickerDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.verticalTickerDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
             this.verticalTickerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -231,6 +247,8 @@
             // 
             // publishButton
             // 
+            this.publishButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.publishButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
             this.publishButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
             this.publishButton.FlatAppearance.BorderSize = 0;
@@ -280,10 +298,10 @@
             this.tickerTab.Controls.Add(this.getRankingsTickerButton);
             this.tickerTab.Controls.Add(this.label13);
             this.tickerTab.Controls.Add(this.dateTextBox);
+            this.tickerTab.Controls.Add(this.tickerTextBox);
             this.tickerTab.Controls.Add(this.nextWeeksResultsButton);
             this.tickerTab.Controls.Add(this.lastWeeksResultsButton);
             this.tickerTab.Controls.Add(this.label12);
-            this.tickerTab.Controls.Add(this.tickerTextBox);
             this.tickerTab.Location = new System.Drawing.Point(4, 22);
             this.tickerTab.Name = "tickerTab";
             this.tickerTab.Padding = new System.Windows.Forms.Padding(3);
@@ -291,55 +309,16 @@
             this.tickerTab.TabIndex = 6;
             this.tickerTab.Text = "Ticker";
             // 
-            // getRankingsTickerButton
+            // label12
             // 
-            this.getRankingsTickerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.getRankingsTickerButton.FlatAppearance.BorderSize = 0;
-            this.getRankingsTickerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getRankingsTickerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.getRankingsTickerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.getRankingsTickerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getRankingsTickerButton.Location = new System.Drawing.Point(886, 146);
-            this.getRankingsTickerButton.Name = "getRankingsTickerButton";
-            this.getRankingsTickerButton.Size = new System.Drawing.Size(222, 33);
-            this.getRankingsTickerButton.TabIndex = 9;
-            this.getRankingsTickerButton.Text = "Get Rankings";
-            this.getRankingsTickerButton.UseVisualStyleBackColor = false;
-            this.getRankingsTickerButton.Click += new System.EventHandler(this.getRankingsTickerButton_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(917, 45);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Date:";
-            // 
-            // dateTextBox
-            // 
-            this.dateTextBox.Location = new System.Drawing.Point(956, 42);
-            this.dateTextBox.Name = "dateTextBox";
-            this.dateTextBox.Size = new System.Drawing.Size(152, 20);
-            this.dateTextBox.TabIndex = 7;
-            // 
-            // nextWeeksResultsButton
-            // 
-            this.nextWeeksResultsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.nextWeeksResultsButton.Enabled = false;
-            this.nextWeeksResultsButton.FlatAppearance.BorderSize = 0;
-            this.nextWeeksResultsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.nextWeeksResultsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.nextWeeksResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nextWeeksResultsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.nextWeeksResultsButton.Location = new System.Drawing.Point(886, 107);
-            this.nextWeeksResultsButton.Name = "nextWeeksResultsButton";
-            this.nextWeeksResultsButton.Size = new System.Drawing.Size(222, 33);
-            this.nextWeeksResultsButton.TabIndex = 6;
-            this.nextWeeksResultsButton.Text = "Get Next Week\'s Events";
-            this.nextWeeksResultsButton.UseVisualStyleBackColor = false;
-            this.nextWeeksResultsButton.Click += new System.EventHandler(this.nextWeeksResultsButton_Click);
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(13, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 20);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "TICKER TEXT";
             // 
             // lastWeeksResultsButton
             // 
@@ -358,16 +337,22 @@
             this.lastWeeksResultsButton.UseVisualStyleBackColor = false;
             this.lastWeeksResultsButton.Click += new System.EventHandler(this.lastWeeksResultsButton_Click);
             // 
-            // label12
+            // nextWeeksResultsButton
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(13, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 20);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "TICKER TEXT";
+            this.nextWeeksResultsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.nextWeeksResultsButton.Enabled = false;
+            this.nextWeeksResultsButton.FlatAppearance.BorderSize = 0;
+            this.nextWeeksResultsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.nextWeeksResultsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.nextWeeksResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.nextWeeksResultsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.nextWeeksResultsButton.Location = new System.Drawing.Point(886, 107);
+            this.nextWeeksResultsButton.Name = "nextWeeksResultsButton";
+            this.nextWeeksResultsButton.Size = new System.Drawing.Size(222, 33);
+            this.nextWeeksResultsButton.TabIndex = 6;
+            this.nextWeeksResultsButton.Text = "Get Next Week\'s Events";
+            this.nextWeeksResultsButton.UseVisualStyleBackColor = false;
+            this.nextWeeksResultsButton.Click += new System.EventHandler(this.nextWeeksResultsButton_Click);
             // 
             // tickerTextBox
             // 
@@ -377,6 +362,39 @@
             this.tickerTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tickerTextBox.Size = new System.Drawing.Size(763, 423);
             this.tickerTextBox.TabIndex = 1;
+            // 
+            // dateTextBox
+            // 
+            this.dateTextBox.Location = new System.Drawing.Point(956, 42);
+            this.dateTextBox.Name = "dateTextBox";
+            this.dateTextBox.Size = new System.Drawing.Size(152, 20);
+            this.dateTextBox.TabIndex = 7;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(917, 45);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(33, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Date:";
+            // 
+            // getRankingsTickerButton
+            // 
+            this.getRankingsTickerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.getRankingsTickerButton.FlatAppearance.BorderSize = 0;
+            this.getRankingsTickerButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.getRankingsTickerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.getRankingsTickerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getRankingsTickerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.getRankingsTickerButton.Location = new System.Drawing.Point(886, 146);
+            this.getRankingsTickerButton.Name = "getRankingsTickerButton";
+            this.getRankingsTickerButton.Size = new System.Drawing.Size(222, 33);
+            this.getRankingsTickerButton.TabIndex = 9;
+            this.getRankingsTickerButton.Text = "Get Rankings";
+            this.getRankingsTickerButton.UseVisualStyleBackColor = false;
+            this.getRankingsTickerButton.Click += new System.EventHandler(this.getRankingsTickerButton_Click);
             // 
             // splashTab
             // 
@@ -392,15 +410,19 @@
             this.splashTab.TabIndex = 4;
             this.splashTab.Text = "Splash";
             // 
-            // label9
+            // splashTopBox
             // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(18, 68);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Bottom";
+            this.splashTopBox.Location = new System.Drawing.Point(21, 27);
+            this.splashTopBox.Name = "splashTopBox";
+            this.splashTopBox.Size = new System.Drawing.Size(630, 20);
+            this.splashTopBox.TabIndex = 0;
+            // 
+            // splashBottomBox
+            // 
+            this.splashBottomBox.Location = new System.Drawing.Point(21, 84);
+            this.splashBottomBox.Name = "splashBottomBox";
+            this.splashBottomBox.Size = new System.Drawing.Size(630, 20);
+            this.splashBottomBox.TabIndex = 1;
             // 
             // label8
             // 
@@ -412,19 +434,15 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Top";
             // 
-            // splashBottomBox
+            // label9
             // 
-            this.splashBottomBox.Location = new System.Drawing.Point(21, 84);
-            this.splashBottomBox.Name = "splashBottomBox";
-            this.splashBottomBox.Size = new System.Drawing.Size(630, 20);
-            this.splashBottomBox.TabIndex = 1;
-            // 
-            // splashTopBox
-            // 
-            this.splashTopBox.Location = new System.Drawing.Point(21, 27);
-            this.splashTopBox.Name = "splashTopBox";
-            this.splashTopBox.Size = new System.Drawing.Size(630, 20);
-            this.splashTopBox.TabIndex = 0;
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(18, 68);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Bottom";
             // 
             // questionsTab
             // 
@@ -444,170 +462,6 @@
             this.questionsTab.Size = new System.Drawing.Size(1118, 474);
             this.questionsTab.TabIndex = 3;
             this.questionsTab.Text = "Questions";
-            // 
-            // dataGridView2
-            // 
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.Location = new System.Drawing.Point(665, 42);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView2.Size = new System.Drawing.Size(444, 366);
-            this.dataGridView2.TabIndex = 5;
-            this.dataGridView2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseDown);
-            // 
-            // dataGridView1
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Location = new System.Drawing.Point(210, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.Size = new System.Drawing.Size(444, 366);
-            this.dataGridView1.TabIndex = 5;
-            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(851, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(72, 20);
-            this.label11.TabIndex = 4;
-            this.label11.Text = "QUEUE";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(394, 19);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 20);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "POOL";
-            // 
-            // clearQuestionButton
-            // 
-            this.clearQuestionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.clearQuestionButton.FlatAppearance.BorderSize = 0;
-            this.clearQuestionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.clearQuestionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.clearQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearQuestionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.clearQuestionButton.Location = new System.Drawing.Point(6, 186);
-            this.clearQuestionButton.Name = "clearQuestionButton";
-            this.clearQuestionButton.Size = new System.Drawing.Size(192, 28);
-            this.clearQuestionButton.TabIndex = 0;
-            this.clearQuestionButton.Text = "Clear Question from Screen";
-            this.clearQuestionButton.UseVisualStyleBackColor = false;
-            this.clearQuestionButton.Click += new System.EventHandler(this.clearQuestionButton_Click_1);
-            // 
-            // clearQuestionsButton
-            // 
-            this.clearQuestionsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.clearQuestionsButton.FlatAppearance.BorderSize = 0;
-            this.clearQuestionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.clearQuestionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.clearQuestionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearQuestionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.clearQuestionsButton.Location = new System.Drawing.Point(8, 383);
-            this.clearQuestionsButton.Name = "clearQuestionsButton";
-            this.clearQuestionsButton.Size = new System.Drawing.Size(190, 28);
-            this.clearQuestionsButton.TabIndex = 0;
-            this.clearQuestionsButton.Text = "Clear All Questions";
-            this.clearQuestionsButton.UseVisualStyleBackColor = false;
-            // 
-            // manualQuestionButton
-            // 
-            this.manualQuestionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.manualQuestionButton.FlatAppearance.BorderSize = 0;
-            this.manualQuestionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.manualQuestionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.manualQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manualQuestionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.manualQuestionButton.Location = new System.Drawing.Point(8, 140);
-            this.manualQuestionButton.Name = "manualQuestionButton";
-            this.manualQuestionButton.Size = new System.Drawing.Size(190, 40);
-            this.manualQuestionButton.TabIndex = 0;
-            this.manualQuestionButton.Text = "Add Manual Question";
-            this.manualQuestionButton.UseVisualStyleBackColor = false;
-            this.manualQuestionButton.Click += new System.EventHandler(this.manualQuestionButton_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.twitterHashtagBox);
-            this.groupBox2.Controls.Add(this.twitterGetQuestionsButton);
-            this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(8, 63);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(190, 71);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Twitter";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(14, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "#";
-            // 
-            // twitterHashtagBox
-            // 
-            this.twitterHashtagBox.Location = new System.Drawing.Point(32, 16);
-            this.twitterHashtagBox.Name = "twitterHashtagBox";
-            this.twitterHashtagBox.Size = new System.Drawing.Size(152, 20);
-            this.twitterHashtagBox.TabIndex = 0;
-            // 
-            // twitterGetQuestionsButton
-            // 
-            this.twitterGetQuestionsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.twitterGetQuestionsButton.FlatAppearance.BorderSize = 0;
-            this.twitterGetQuestionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.twitterGetQuestionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.twitterGetQuestionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.twitterGetQuestionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.twitterGetQuestionsButton.Location = new System.Drawing.Point(7, 39);
-            this.twitterGetQuestionsButton.Name = "twitterGetQuestionsButton";
-            this.twitterGetQuestionsButton.Size = new System.Drawing.Size(177, 23);
-            this.twitterGetQuestionsButton.TabIndex = 1;
-            this.twitterGetQuestionsButton.Text = "Get Questions";
-            this.twitterGetQuestionsButton.UseVisualStyleBackColor = false;
-            this.twitterGetQuestionsButton.Click += new System.EventHandler(this.twitterGetQuestionsButton_Click);
             // 
             // groupBox3
             // 
@@ -636,6 +490,282 @@
             this.twitchGetQuestionsButton.UseVisualStyleBackColor = false;
             this.twitchGetQuestionsButton.Click += new System.EventHandler(this.twitchGetQuestionsButton_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.twitterHashtagBox);
+            this.groupBox2.Controls.Add(this.twitterGetQuestionsButton);
+            this.groupBox2.ForeColor = System.Drawing.Color.Black;
+            this.groupBox2.Location = new System.Drawing.Point(8, 63);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(190, 71);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Twitter";
+            // 
+            // twitterGetQuestionsButton
+            // 
+            this.twitterGetQuestionsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.twitterGetQuestionsButton.FlatAppearance.BorderSize = 0;
+            this.twitterGetQuestionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.twitterGetQuestionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.twitterGetQuestionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.twitterGetQuestionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.twitterGetQuestionsButton.Location = new System.Drawing.Point(7, 39);
+            this.twitterGetQuestionsButton.Name = "twitterGetQuestionsButton";
+            this.twitterGetQuestionsButton.Size = new System.Drawing.Size(177, 23);
+            this.twitterGetQuestionsButton.TabIndex = 1;
+            this.twitterGetQuestionsButton.Text = "Get Questions";
+            this.twitterGetQuestionsButton.UseVisualStyleBackColor = false;
+            this.twitterGetQuestionsButton.Click += new System.EventHandler(this.twitterGetQuestionsButton_Click);
+            // 
+            // twitterHashtagBox
+            // 
+            this.twitterHashtagBox.Location = new System.Drawing.Point(32, 16);
+            this.twitterHashtagBox.Name = "twitterHashtagBox";
+            this.twitterHashtagBox.Size = new System.Drawing.Size(152, 20);
+            this.twitterHashtagBox.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(14, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "#";
+            // 
+            // manualQuestionButton
+            // 
+            this.manualQuestionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.manualQuestionButton.FlatAppearance.BorderSize = 0;
+            this.manualQuestionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.manualQuestionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.manualQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manualQuestionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.manualQuestionButton.Location = new System.Drawing.Point(8, 140);
+            this.manualQuestionButton.Name = "manualQuestionButton";
+            this.manualQuestionButton.Size = new System.Drawing.Size(190, 40);
+            this.manualQuestionButton.TabIndex = 0;
+            this.manualQuestionButton.Text = "Add Manual Question";
+            this.manualQuestionButton.UseVisualStyleBackColor = false;
+            this.manualQuestionButton.Click += new System.EventHandler(this.manualQuestionButton_Click);
+            // 
+            // clearQuestionsButton
+            // 
+            this.clearQuestionsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.clearQuestionsButton.FlatAppearance.BorderSize = 0;
+            this.clearQuestionsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.clearQuestionsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.clearQuestionsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearQuestionsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.clearQuestionsButton.Location = new System.Drawing.Point(8, 383);
+            this.clearQuestionsButton.Name = "clearQuestionsButton";
+            this.clearQuestionsButton.Size = new System.Drawing.Size(190, 28);
+            this.clearQuestionsButton.TabIndex = 0;
+            this.clearQuestionsButton.Text = "Clear All Questions";
+            this.clearQuestionsButton.UseVisualStyleBackColor = false;
+            // 
+            // clearQuestionButton
+            // 
+            this.clearQuestionButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.clearQuestionButton.FlatAppearance.BorderSize = 0;
+            this.clearQuestionButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.clearQuestionButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.clearQuestionButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearQuestionButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.clearQuestionButton.Location = new System.Drawing.Point(6, 186);
+            this.clearQuestionButton.Name = "clearQuestionButton";
+            this.clearQuestionButton.Size = new System.Drawing.Size(192, 28);
+            this.clearQuestionButton.TabIndex = 0;
+            this.clearQuestionButton.Text = "Clear Question from Screen";
+            this.clearQuestionButton.UseVisualStyleBackColor = false;
+            this.clearQuestionButton.Click += new System.EventHandler(this.clearQuestionButton_Click_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(394, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 20);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "POOL";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(851, 19);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 20);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "QUEUE";
+            // 
+            // dataGridView1
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridView1.Location = new System.Drawing.Point(210, 42);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridView1.Size = new System.Drawing.Size(444, 366);
+            this.dataGridView1.TabIndex = 5;
+            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseClick);
+            // 
+            // dataGridView2
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.DimGray;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView2.Location = new System.Drawing.Point(665, 42);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView2.Size = new System.Drawing.Size(444, 366);
+            this.dataGridView2.TabIndex = 5;
+            this.dataGridView2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView2_MouseDown);
+            // 
+            // postMatchTab
+            // 
+            this.postMatchTab.BackColor = System.Drawing.Color.DarkGray;
+            this.postMatchTab.Controls.Add(this.postMatchDataGridView);
+            this.postMatchTab.Controls.Add(this.postMatchRefreshButton);
+            this.postMatchTab.Location = new System.Drawing.Point(4, 22);
+            this.postMatchTab.Name = "postMatchTab";
+            this.postMatchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.postMatchTab.Size = new System.Drawing.Size(1118, 474);
+            this.postMatchTab.TabIndex = 10;
+            this.postMatchTab.Text = "Post Match";
+            // 
+            // postMatchRefreshButton
+            // 
+            this.postMatchRefreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.postMatchRefreshButton.FlatAppearance.BorderSize = 0;
+            this.postMatchRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.postMatchRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.postMatchRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postMatchRefreshButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.postMatchRefreshButton.Location = new System.Drawing.Point(6, 6);
+            this.postMatchRefreshButton.Name = "postMatchRefreshButton";
+            this.postMatchRefreshButton.Size = new System.Drawing.Size(222, 33);
+            this.postMatchRefreshButton.TabIndex = 11;
+            this.postMatchRefreshButton.Text = "Refresh Match List";
+            this.postMatchRefreshButton.UseVisualStyleBackColor = false;
+            this.postMatchRefreshButton.Click += new System.EventHandler(this.postMatchRefreshButton_Click);
+            // 
+            // postMatchDataGridView
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.postMatchDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.postMatchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.postMatchDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
+            this.postMatchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.postMatchDataGridView.DefaultCellStyle = dataGridViewCellStyle9;
+            this.postMatchDataGridView.Location = new System.Drawing.Point(6, 45);
+            this.postMatchDataGridView.Name = "postMatchDataGridView";
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.postMatchDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.postMatchDataGridView.Size = new System.Drawing.Size(1106, 423);
+            this.postMatchDataGridView.TabIndex = 12;
+            // 
+            // nextMatchTab
+            // 
+            this.nextMatchTab.BackColor = System.Drawing.Color.DarkGray;
+            this.nextMatchTab.Controls.Add(this.nextMatchDataGridView);
+            this.nextMatchTab.Controls.Add(this.refreshMatchListButton);
+            this.nextMatchTab.Location = new System.Drawing.Point(4, 22);
+            this.nextMatchTab.Name = "nextMatchTab";
+            this.nextMatchTab.Padding = new System.Windows.Forms.Padding(3);
+            this.nextMatchTab.Size = new System.Drawing.Size(1118, 474);
+            this.nextMatchTab.TabIndex = 9;
+            this.nextMatchTab.Text = "Next Match";
+            // 
+            // refreshMatchListButton
+            // 
+            this.refreshMatchListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.refreshMatchListButton.FlatAppearance.BorderSize = 0;
+            this.refreshMatchListButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.refreshMatchListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.refreshMatchListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshMatchListButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.refreshMatchListButton.Location = new System.Drawing.Point(6, 6);
+            this.refreshMatchListButton.Name = "refreshMatchListButton";
+            this.refreshMatchListButton.Size = new System.Drawing.Size(222, 33);
+            this.refreshMatchListButton.TabIndex = 9;
+            this.refreshMatchListButton.Text = "Refresh Match List";
+            this.refreshMatchListButton.UseVisualStyleBackColor = false;
+            this.refreshMatchListButton.Click += new System.EventHandler(this.nextMatchRefreshButton_Click);
+            // 
+            // nextMatchDataGridView
+            // 
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.nextMatchDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.nextMatchDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nextMatchDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
+            this.nextMatchDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.nextMatchDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            this.nextMatchDataGridView.Location = new System.Drawing.Point(6, 45);
+            this.nextMatchDataGridView.Name = "nextMatchDataGridView";
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            this.nextMatchDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.nextMatchDataGridView.Size = new System.Drawing.Size(1106, 423);
+            this.nextMatchDataGridView.TabIndex = 10;
+            // 
             // castersTab
             // 
             this.castersTab.BackColor = System.Drawing.Color.DarkGray;
@@ -645,7 +775,7 @@
             this.castersTab.Padding = new System.Windows.Forms.Padding(3);
             this.castersTab.Size = new System.Drawing.Size(1118, 474);
             this.castersTab.TabIndex = 0;
-            this.castersTab.Text = "Hosts & Guests";
+            this.castersTab.Text = "Casters";
             // 
             // groupBox1
             // 
@@ -669,139 +799,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Names";
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(21, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Host 1";
-            // 
-            // Guest2ComboBox
-            // 
-            this.Guest2ComboBox.Enabled = false;
-            this.Guest2ComboBox.ForeColor = System.Drawing.Color.Black;
-            this.Guest2ComboBox.FormattingEnabled = true;
-            this.Guest2ComboBox.Items.AddRange(new object[] {
-            "STEPH MORRISON",
-            "EVAN MORRISON",
-            "TY TREMBLAY",
-            "DAVID McLAUGHLIN",
-            "FRANCIS O\'ROURKE",
-            "NAVID SHAFA"});
-            this.Guest2ComboBox.Location = new System.Drawing.Point(73, 159);
-            this.Guest2ComboBox.Name = "Guest2ComboBox";
-            this.Guest2ComboBox.Size = new System.Drawing.Size(176, 21);
-            this.Guest2ComboBox.TabIndex = 18;
-            // 
-            // Host1ComboBox
-            // 
-            this.Host1ComboBox.ForeColor = System.Drawing.Color.Black;
-            this.Host1ComboBox.FormattingEnabled = true;
-            this.Host1ComboBox.Items.AddRange(new object[] {
-            "STEPH MORRISON",
-            "EVAN MORRISON",
-            "TY TREMBLAY",
-            "FRANCIS O\'ROURKE",
-            "NAVID SHAFA"});
-            this.Host1ComboBox.Location = new System.Drawing.Point(73, 24);
-            this.Host1ComboBox.Name = "Host1ComboBox";
-            this.Host1ComboBox.Size = new System.Drawing.Size(176, 21);
-            this.Host1ComboBox.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Enabled = false;
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(21, 163);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Guest 2";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(274, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Host 2";
-            // 
-            // Guest1ComboBox
-            // 
-            this.Guest1ComboBox.Enabled = false;
-            this.Guest1ComboBox.ForeColor = System.Drawing.Color.Black;
-            this.Guest1ComboBox.FormattingEnabled = true;
-            this.Guest1ComboBox.Items.AddRange(new object[] {
-            "STEPH MORRISON",
-            "EVAN MORRISON",
-            "TY TREMBLAY",
-            "DAVID McLAUGHLIN",
-            "FRANCIS O\'ROURKE",
-            "NAVID SHAFA"});
-            this.Guest1ComboBox.Location = new System.Drawing.Point(73, 132);
-            this.Guest1ComboBox.Name = "Guest1ComboBox";
-            this.Guest1ComboBox.Size = new System.Drawing.Size(176, 21);
-            this.Guest1ComboBox.TabIndex = 13;
-            // 
-            // Host2ComboBox
-            // 
-            this.Host2ComboBox.ForeColor = System.Drawing.Color.Black;
-            this.Host2ComboBox.FormattingEnabled = true;
-            this.Host2ComboBox.Items.AddRange(new object[] {
-            "STEPH MORRISON",
-            "EVAN MORRISON",
-            "TY TREMBLAY",
-            "FRANCIS O\'ROURKE",
-            "NAVID SHAFA"});
-            this.Host2ComboBox.Location = new System.Drawing.Point(326, 25);
-            this.Host2ComboBox.Name = "Host2ComboBox";
-            this.Host2ComboBox.Size = new System.Drawing.Size(176, 21);
-            this.Host2ComboBox.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Enabled = false;
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(21, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Guest 1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Enabled = false;
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(21, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Host 3";
-            // 
-            // Host4ComboBox
-            // 
-            this.Host4ComboBox.Enabled = false;
-            this.Host4ComboBox.ForeColor = System.Drawing.Color.Black;
-            this.Host4ComboBox.FormattingEnabled = true;
-            this.Host4ComboBox.Items.AddRange(new object[] {
-            "STEPH MORRISON",
-            "EVAN MORRISON",
-            "TY TREMBLAY",
-            "DAVID McLAUGHLIN",
-            "FRANCIS O\'ROURKE",
-            "NAVID SHAFA"});
-            this.Host4ComboBox.Location = new System.Drawing.Point(73, 105);
-            this.Host4ComboBox.Name = "Host4ComboBox";
-            this.Host4ComboBox.Size = new System.Drawing.Size(176, 21);
-            this.Host4ComboBox.TabIndex = 11;
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(21, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Host 4";
             // 
             // Host3ComboBox
             // 
@@ -820,135 +827,211 @@
             this.Host3ComboBox.Size = new System.Drawing.Size(176, 21);
             this.Host3ComboBox.TabIndex = 9;
             // 
-            // label4
+            // Host4ComboBox
             // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(21, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Host 4";
+            this.Host4ComboBox.Enabled = false;
+            this.Host4ComboBox.ForeColor = System.Drawing.Color.Black;
+            this.Host4ComboBox.FormattingEnabled = true;
+            this.Host4ComboBox.Items.AddRange(new object[] {
+            "STEPH MORRISON",
+            "EVAN MORRISON",
+            "TY TREMBLAY",
+            "DAVID McLAUGHLIN",
+            "FRANCIS O\'ROURKE",
+            "NAVID SHAFA"});
+            this.Host4ComboBox.Location = new System.Drawing.Point(73, 105);
+            this.Host4ComboBox.Name = "Host4ComboBox";
+            this.Host4ComboBox.Size = new System.Drawing.Size(176, 21);
+            this.Host4ComboBox.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Enabled = false;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(21, 82);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Host 3";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Enabled = false;
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(21, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Guest 1";
+            // 
+            // Host2ComboBox
+            // 
+            this.Host2ComboBox.ForeColor = System.Drawing.Color.Black;
+            this.Host2ComboBox.FormattingEnabled = true;
+            this.Host2ComboBox.Items.AddRange(new object[] {
+            "STEPH MORRISON",
+            "EVAN MORRISON",
+            "TY TREMBLAY",
+            "FRANCIS O\'ROURKE",
+            "NAVID SHAFA"});
+            this.Host2ComboBox.Location = new System.Drawing.Point(326, 25);
+            this.Host2ComboBox.Name = "Host2ComboBox";
+            this.Host2ComboBox.Size = new System.Drawing.Size(176, 21);
+            this.Host2ComboBox.TabIndex = 8;
+            // 
+            // Guest1ComboBox
+            // 
+            this.Guest1ComboBox.Enabled = false;
+            this.Guest1ComboBox.ForeColor = System.Drawing.Color.Black;
+            this.Guest1ComboBox.FormattingEnabled = true;
+            this.Guest1ComboBox.Items.AddRange(new object[] {
+            "STEPH MORRISON",
+            "EVAN MORRISON",
+            "TY TREMBLAY",
+            "DAVID McLAUGHLIN",
+            "FRANCIS O\'ROURKE",
+            "NAVID SHAFA"});
+            this.Guest1ComboBox.Location = new System.Drawing.Point(73, 132);
+            this.Guest1ComboBox.Name = "Guest1ComboBox";
+            this.Guest1ComboBox.Size = new System.Drawing.Size(176, 21);
+            this.Guest1ComboBox.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(274, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Caster 2";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Enabled = false;
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(21, 163);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Guest 2";
+            // 
+            // Host1ComboBox
+            // 
+            this.Host1ComboBox.ForeColor = System.Drawing.Color.Black;
+            this.Host1ComboBox.FormattingEnabled = true;
+            this.Host1ComboBox.Items.AddRange(new object[] {
+            "STEPH MORRISON",
+            "EVAN MORRISON",
+            "TY TREMBLAY",
+            "FRANCIS O\'ROURKE",
+            "NAVID SHAFA"});
+            this.Host1ComboBox.Location = new System.Drawing.Point(73, 24);
+            this.Host1ComboBox.Name = "Host1ComboBox";
+            this.Host1ComboBox.Size = new System.Drawing.Size(176, 21);
+            this.Host1ComboBox.TabIndex = 7;
+            // 
+            // Guest2ComboBox
+            // 
+            this.Guest2ComboBox.Enabled = false;
+            this.Guest2ComboBox.ForeColor = System.Drawing.Color.Black;
+            this.Guest2ComboBox.FormattingEnabled = true;
+            this.Guest2ComboBox.Items.AddRange(new object[] {
+            "STEPH MORRISON",
+            "EVAN MORRISON",
+            "TY TREMBLAY",
+            "DAVID McLAUGHLIN",
+            "FRANCIS O\'ROURKE",
+            "NAVID SHAFA"});
+            this.Guest2ComboBox.Location = new System.Drawing.Point(73, 159);
+            this.Guest2ComboBox.Name = "Guest2ComboBox";
+            this.Guest2ComboBox.Size = new System.Drawing.Size(176, 21);
+            this.Guest2ComboBox.TabIndex = 18;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(21, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Caster 1";
             // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.castersTab);
             this.tabControl1.Controls.Add(this.nextMatchTab);
+            this.tabControl1.Controls.Add(this.postMatchTab);
             this.tabControl1.Controls.Add(this.questionsTab);
             this.tabControl1.Controls.Add(this.splashTab);
             this.tabControl1.Controls.Add(this.tickerTab);
-            this.tabControl1.Controls.Add(this.rankingsTab);
-            this.tabControl1.Controls.Add(this.resultsTab);
+            this.tabControl1.Controls.Add(this.bracketTab);
             this.tabControl1.Location = new System.Drawing.Point(151, 71);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1126, 500);
             this.tabControl1.TabIndex = 7;
             // 
-            // rankingsTab
+            // bracketTab
             // 
-            this.rankingsTab.BackColor = System.Drawing.Color.DarkGray;
-            this.rankingsTab.Controls.Add(this.getRankingsButton);
-            this.rankingsTab.Location = new System.Drawing.Point(4, 22);
-            this.rankingsTab.Name = "rankingsTab";
-            this.rankingsTab.Size = new System.Drawing.Size(1118, 474);
-            this.rankingsTab.TabIndex = 7;
-            this.rankingsTab.Text = "Rankings";
+            this.bracketTab.BackColor = System.Drawing.Color.DarkGray;
+            this.bracketTab.Controls.Add(this.bracketDataGridView);
+            this.bracketTab.Controls.Add(this.bracketRefreshButton);
+            this.bracketTab.Location = new System.Drawing.Point(4, 22);
+            this.bracketTab.Name = "bracketTab";
+            this.bracketTab.Padding = new System.Windows.Forms.Padding(3);
+            this.bracketTab.Size = new System.Drawing.Size(1118, 474);
+            this.bracketTab.TabIndex = 11;
+            this.bracketTab.Text = "Bracket";
             // 
-            // getRankingsButton
+            // bracketDataGridView
             // 
-            this.getRankingsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.getRankingsButton.FlatAppearance.BorderSize = 0;
-            this.getRankingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getRankingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.getRankingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.getRankingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getRankingsButton.Location = new System.Drawing.Point(3, 3);
-            this.getRankingsButton.Name = "getRankingsButton";
-            this.getRankingsButton.Size = new System.Drawing.Size(222, 33);
-            this.getRankingsButton.TabIndex = 7;
-            this.getRankingsButton.Text = "Get Rankings";
-            this.getRankingsButton.UseVisualStyleBackColor = false;
-            this.getRankingsButton.Click += new System.EventHandler(this.getRankingsButton_Click);
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.bracketDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.bracketDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bracketDataGridView.BackgroundColor = System.Drawing.Color.DimGray;
+            this.bracketDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bracketDataGridView.DefaultCellStyle = dataGridViewCellStyle15;
+            this.bracketDataGridView.Location = new System.Drawing.Point(6, 45);
+            this.bracketDataGridView.Name = "bracketDataGridView";
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.bracketDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.bracketDataGridView.Size = new System.Drawing.Size(1106, 423);
+            this.bracketDataGridView.TabIndex = 14;
             // 
-            // resultsTab
+            // bracketRefreshButton
             // 
-            this.resultsTab.BackColor = System.Drawing.Color.DarkGray;
-            this.resultsTab.Controls.Add(this.matchNumberBox);
-            this.resultsTab.Controls.Add(this.generateStacksPicsButton);
-            this.resultsTab.Controls.Add(this.getResultsButton);
-            this.resultsTab.Location = new System.Drawing.Point(4, 22);
-            this.resultsTab.Name = "resultsTab";
-            this.resultsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.resultsTab.Size = new System.Drawing.Size(1118, 474);
-            this.resultsTab.TabIndex = 8;
-            this.resultsTab.Text = "Results";
-            // 
-            // matchNumberBox
-            // 
-            this.matchNumberBox.Location = new System.Drawing.Point(233, 107);
-            this.matchNumberBox.Name = "matchNumberBox";
-            this.matchNumberBox.Size = new System.Drawing.Size(152, 20);
-            this.matchNumberBox.TabIndex = 9;
-            // 
-            // generateStacksPicsButton
-            // 
-            this.generateStacksPicsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.generateStacksPicsButton.FlatAppearance.BorderSize = 0;
-            this.generateStacksPicsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.generateStacksPicsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.generateStacksPicsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generateStacksPicsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.generateStacksPicsButton.Location = new System.Drawing.Point(6, 100);
-            this.generateStacksPicsButton.Name = "generateStacksPicsButton";
-            this.generateStacksPicsButton.Size = new System.Drawing.Size(222, 33);
-            this.generateStacksPicsButton.TabIndex = 8;
-            this.generateStacksPicsButton.Text = "Generate Stacks Pics";
-            this.generateStacksPicsButton.UseVisualStyleBackColor = false;
-            this.generateStacksPicsButton.Click += new System.EventHandler(this.generateStacksPicsButton_Click);
-            // 
-            // getResultsButton
-            // 
-            this.getResultsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.getResultsButton.FlatAppearance.BorderSize = 0;
-            this.getResultsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getResultsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.getResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.getResultsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getResultsButton.Location = new System.Drawing.Point(6, 6);
-            this.getResultsButton.Name = "getResultsButton";
-            this.getResultsButton.Size = new System.Drawing.Size(222, 33);
-            this.getResultsButton.TabIndex = 8;
-            this.getResultsButton.Text = "Get Results";
-            this.getResultsButton.UseVisualStyleBackColor = false;
-            this.getResultsButton.Click += new System.EventHandler(this.getResultsButton_Click);
-            // 
-            // nextMatchTab
-            // 
-            this.nextMatchTab.BackColor = System.Drawing.Color.DarkGray;
-            this.nextMatchTab.Controls.Add(this.refreshMatchListButton);
-            this.nextMatchTab.Location = new System.Drawing.Point(4, 22);
-            this.nextMatchTab.Name = "nextMatchTab";
-            this.nextMatchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.nextMatchTab.Size = new System.Drawing.Size(1118, 474);
-            this.nextMatchTab.TabIndex = 9;
-            this.nextMatchTab.Text = "Next Match";
-            // 
-            // refreshMatchListButton
-            // 
-            this.refreshMatchListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.refreshMatchListButton.FlatAppearance.BorderSize = 0;
-            this.refreshMatchListButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.refreshMatchListButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.refreshMatchListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshMatchListButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.refreshMatchListButton.Location = new System.Drawing.Point(6, 6);
-            this.refreshMatchListButton.Name = "refreshMatchListButton";
-            this.refreshMatchListButton.Size = new System.Drawing.Size(222, 33);
-            this.refreshMatchListButton.TabIndex = 9;
-            this.refreshMatchListButton.Text = "Refresh Match List";
-            this.refreshMatchListButton.UseVisualStyleBackColor = false;
+            this.bracketRefreshButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.bracketRefreshButton.FlatAppearance.BorderSize = 0;
+            this.bracketRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.bracketRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.bracketRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bracketRefreshButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.bracketRefreshButton.Location = new System.Drawing.Point(6, 6);
+            this.bracketRefreshButton.Name = "bracketRefreshButton";
+            this.bracketRefreshButton.Size = new System.Drawing.Size(222, 33);
+            this.bracketRefreshButton.TabIndex = 13;
+            this.bracketRefreshButton.Text = "Refresh Match List";
+            this.bracketRefreshButton.UseVisualStyleBackColor = false;
+            this.bracketRefreshButton.Click += new System.EventHandler(this.bracketRefreshButton_Click);
             // 
             // Form1
             // 
@@ -968,6 +1051,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "CC Helper 2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.menuStrip1.ResumeLayout(false);
@@ -979,19 +1063,21 @@
             this.splashTab.PerformLayout();
             this.questionsTab.ResumeLayout(false);
             this.questionsTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.postMatchTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.postMatchDataGridView)).EndInit();
+            this.nextMatchTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nextMatchDataGridView)).EndInit();
             this.castersTab.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.rankingsTab.ResumeLayout(false);
-            this.resultsTab.ResumeLayout(false);
-            this.resultsTab.PerformLayout();
-            this.nextMatchTab.ResumeLayout(false);
+            this.bracketTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bracketDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1014,6 +1100,13 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TabPage tickerTab;
+        private System.Windows.Forms.Button getRankingsTickerButton;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox dateTextBox;
+        private System.Windows.Forms.TextBox tickerTextBox;
+        private System.Windows.Forms.Button nextWeeksResultsButton;
+        private System.Windows.Forms.Button lastWeeksResultsButton;
+        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TabPage splashTab;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -1033,6 +1126,12 @@
         private System.Windows.Forms.Button twitterGetQuestionsButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button twitchGetQuestionsButton;
+        private System.Windows.Forms.TabPage postMatchTab;
+        private System.Windows.Forms.DataGridView postMatchDataGridView;
+        private System.Windows.Forms.Button postMatchRefreshButton;
+        private System.Windows.Forms.TabPage nextMatchTab;
+        private System.Windows.Forms.DataGridView nextMatchDataGridView;
+        private System.Windows.Forms.Button refreshMatchListButton;
         private System.Windows.Forms.TabPage castersTab;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
@@ -1048,21 +1147,9 @@
         private System.Windows.Forms.ComboBox Host3ComboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox tickerTextBox;
-        private System.Windows.Forms.Button lastWeeksResultsButton;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox dateTextBox;
-        private System.Windows.Forms.Button nextWeeksResultsButton;
-        private System.Windows.Forms.TabPage rankingsTab;
-        private System.Windows.Forms.Button getRankingsButton;
-        private System.Windows.Forms.TabPage resultsTab;
-        private System.Windows.Forms.Button getResultsButton;
-        private System.Windows.Forms.TextBox matchNumberBox;
-        private System.Windows.Forms.Button generateStacksPicsButton;
-        private System.Windows.Forms.Button getRankingsTickerButton;
-        private System.Windows.Forms.TabPage nextMatchTab;
-        private System.Windows.Forms.Button refreshMatchListButton;
+        private System.Windows.Forms.TabPage bracketTab;
+        private System.Windows.Forms.DataGridView bracketDataGridView;
+        private System.Windows.Forms.Button bracketRefreshButton;
     }
 }
 

@@ -40,7 +40,7 @@ namespace CCHelper2
         private void settingsSaveButton_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.XsplitInstallLocation = settingsXsplitLocationBox.Text;
-            Properties.Settings.Default.GSFolderLocation = settingsBTLFolderLocationBox.Text;
+            Properties.Settings.Default.graphicsFolderLocation = settingsBTLFolderLocationBox.Text;
             Properties.Settings.Default.apiUrl = apiUrlBox.Text;
             Properties.Settings.Default.Save();
             this.Close();
@@ -49,7 +49,7 @@ namespace CCHelper2
         private void SettingsForm_Load(object sender, EventArgs e)
         {
             settingsXsplitLocationBox.Text = Properties.Settings.Default.XsplitInstallLocation;
-            settingsBTLFolderLocationBox.Text = Properties.Settings.Default.GSFolderLocation;
+            settingsBTLFolderLocationBox.Text = Properties.Settings.Default.graphicsFolderLocation;
             apiUrlBox.Text = Properties.Settings.Default.apiUrl;
             if (Properties.Settings.Default.twitterVerified)
             {
