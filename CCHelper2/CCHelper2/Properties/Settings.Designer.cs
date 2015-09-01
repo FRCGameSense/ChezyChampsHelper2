@@ -286,5 +286,29 @@ namespace CCHelper2.Properties {
                 this["graphicsFolderLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string botPicsLocation {
+            get {
+                return ((string)(this["botPicsLocation"]));
+            }
+            set {
+                this["botPicsLocation"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point tickerWindowLocation {
+            get {
+                return ((global::System.Drawing.Point)(this["tickerWindowLocation"]));
+            }
+            set {
+                this["tickerWindowLocation"] = value;
+            }
+        }
     }
 }

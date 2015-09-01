@@ -61,10 +61,38 @@ namespace CCHelper2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] futura_lt_heavy {
+            get {
+                object obj = ResourceManager.GetObject("futura_lt_heavy", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] futura_lt_light {
+            get {
+                object obj = ResourceManager.GetObject("futura_lt_light", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] futura_lt_medium {
+            get {
+                object obj = ResourceManager.GetObject("futura_lt_medium", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;items&gt;
         /// &lt;topic0&gt;CLICK HERE TO ADD&lt;/topic0&gt;
-        ///WELCOME KIET!
-        ///&lt;/topic0&gt;
         /// &lt;topic1&gt;&lt;/topic1&gt;
         /// &lt;topic2&gt;&lt;/topic2&gt;
         /// &lt;topic3&gt;&lt;/topic3&gt;
@@ -77,7 +105,8 @@ namespace CCHelper2.Properties {
         /// &lt;guest1&gt;FRANCIS O&apos;ROURKE&lt;/guest1&gt;
         /// &lt;guest2&gt;NAVID SHAFA&lt;/guest2&gt;
         /// &lt;question&gt;Have a question? Tweet: @FRCGameSense #FRCGS | Email: gamesense@frcgamesense.com | Chat: “!q” in Twitch and YouTube&lt;/question&gt;
-        /// &lt;author [rest of string was truncated]&quot;;.
+        /// &lt;author&gt;&lt;/author&gt;
+        /// &lt;splashTop&gt;TE [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string streamcontrol {
             get {

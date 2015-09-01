@@ -52,6 +52,9 @@
             this.eventTab = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.apiUrlBox = new System.Windows.Forms.TextBox();
+            this.botPicsLocationBox = new System.Windows.Forms.TextBox();
+            this.botPicsFolderBrowseButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.filesTab.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.twitterTab.SuspendLayout();
@@ -91,6 +94,9 @@
             // 
             // filesTab
             // 
+            this.filesTab.Controls.Add(this.botPicsLocationBox);
+            this.filesTab.Controls.Add(this.botPicsFolderBrowseButton);
+            this.filesTab.Controls.Add(this.label4);
             this.filesTab.Controls.Add(this.label1);
             this.filesTab.Controls.Add(this.settingsXsplitLocationBox);
             this.filesTab.Controls.Add(this.settingsBTLFolderLocationBox);
@@ -282,6 +288,32 @@
             this.apiUrlBox.Size = new System.Drawing.Size(333, 20);
             this.apiUrlBox.TabIndex = 4;
             // 
+            // botPicsLocationBox
+            // 
+            this.botPicsLocationBox.Location = new System.Drawing.Point(6, 119);
+            this.botPicsLocationBox.Name = "botPicsLocationBox";
+            this.botPicsLocationBox.Size = new System.Drawing.Size(333, 20);
+            this.botPicsLocationBox.TabIndex = 8;
+            // 
+            // botPicsFolderBrowseButton
+            // 
+            this.botPicsFolderBrowseButton.Location = new System.Drawing.Point(345, 117);
+            this.botPicsFolderBrowseButton.Name = "botPicsFolderBrowseButton";
+            this.botPicsFolderBrowseButton.Size = new System.Drawing.Size(75, 23);
+            this.botPicsFolderBrowseButton.TabIndex = 10;
+            this.botPicsFolderBrowseButton.Text = "Browse";
+            this.botPicsFolderBrowseButton.UseVisualStyleBackColor = true;
+            this.botPicsFolderBrowseButton.Click += new System.EventHandler(this.botPicsFolderBrowseButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Robot Pics Folder Location";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -332,5 +364,8 @@
         private System.Windows.Forms.TabPage eventTab;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox apiUrlBox;
+        private System.Windows.Forms.TextBox botPicsLocationBox;
+        private System.Windows.Forms.Button botPicsFolderBrowseButton;
+        private System.Windows.Forms.Label label4;
     }
 }

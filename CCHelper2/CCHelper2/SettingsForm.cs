@@ -42,6 +42,7 @@ namespace CCHelper2
             Properties.Settings.Default.XsplitInstallLocation = settingsXsplitLocationBox.Text;
             Properties.Settings.Default.graphicsFolderLocation = settingsBTLFolderLocationBox.Text;
             Properties.Settings.Default.apiUrl = apiUrlBox.Text;
+            Properties.Settings.Default.botPicsLocation = botPicsLocationBox.Text;
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -50,6 +51,7 @@ namespace CCHelper2
         {
             settingsXsplitLocationBox.Text = Properties.Settings.Default.XsplitInstallLocation;
             settingsBTLFolderLocationBox.Text = Properties.Settings.Default.graphicsFolderLocation;
+            botPicsLocationBox.Text = Properties.Settings.Default.botPicsLocation;
             apiUrlBox.Text = Properties.Settings.Default.apiUrl;
             if (Properties.Settings.Default.twitterVerified)
             {
@@ -137,6 +139,19 @@ namespace CCHelper2
         private void enableResetCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             resetSettingsButton.Enabled = enableResetCheckBox.Checked;
+        }
+
+        private void botPicsFolderBrowseButton_Click(object sender, EventArgs e)
+        {
+            folderBrowserDialog1.Description = "Select the location of the Chezy Champs robot pics.";
+            folderBrowserDialog1.ShowNewFolderButton = false;
+
+            // Show the FolderBrowserDialog.
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                botPicsLocationBox.Text = folderBrowserDialog1.SelectedPath;
+            }
         }
 
 

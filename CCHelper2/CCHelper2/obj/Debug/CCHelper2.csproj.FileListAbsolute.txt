@@ -1,8 +1,3 @@
-C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.BTLQuestionForm.resources
-C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.Form1.resources
-C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.Properties.Resources.resources
-C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.SettingsForm.resources
-C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.csproj.GenerateResource.Cache
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\CCHelper2.exe.config
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\CCHelper2.exe
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\CCHelper2.pdb
@@ -15,6 +10,17 @@ C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\D
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\SmarIrc4net.pdb
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\SmarIrc4net.xml
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\TweetSharp.pdb
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.BTLQuestionForm.resources
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.Form1.resources
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.Properties.Resources.resources
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.SettingsForm.resources
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.csproj.GenerateResource.Cache
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.exe
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.pdb
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.csprojResolveAssemblyReference.cache
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.csproj.ResolveComReference.cache
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.TickerWindow.resources

@@ -102,6 +102,9 @@ namespace CCHelper2
 
                     string xml = System.IO.Path.Combine(Properties.Settings.Default.GSFolderLocation, "Software", "streamcontrol_base.xml");
                     xsHandler.copyStreamControlXMLToXsplitLocation(Properties.Settings.Default.XsplitInstallLocation);
+                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_medium.tff", Properties.Resources.futura_lt_medium);
+                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_light.tff", Properties.Resources.futura_lt_light);
+                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_heavy.tff", Properties.Resources.futura_lt_heavy);
                 }
                 Properties.Settings.Default.Save();
             }
@@ -186,6 +189,8 @@ namespace CCHelper2
             verticalTickerDataGridView.ClearSelection();
             verticalTickerDataGridView.Rows[Properties.Settings.Default.currentTopic].Selected = true;
             publishTopics();
+            updateRankingsTicker();
+            publishTicker();
 
             switch (tabControl1.SelectedTab.Name)
             {
@@ -368,9 +373,14 @@ namespace CCHelper2
                     xsHandler.changeXMLTag("nextMatch" + cell.OwningColumn.Name, cell.Value.ToString());
                 }
 
+                xsHandler.changeXMLTag("red1PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Red1"].Value), "Red1"));
+                xsHandler.changeXMLTag("red2PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Red2"].Value), "Red2"));
+                xsHandler.changeXMLTag("red3PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Red3"].Value), "Red3"));
+
+                xsHandler.changeXMLTag("blue1PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Blue1"].Value), "Blue1"));
+                xsHandler.changeXMLTag("blue2PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Blue2"].Value), "Blue2"));
+                xsHandler.changeXMLTag("blue3PicPath", setBotPic(Convert.ToInt32(selectedRow.Cells["Blue3"].Value), "Blue3"));
                 
-
-
                 xsHandler.writeXMLFile();
             }
         }
@@ -1132,6 +1142,11 @@ namespace CCHelper2
 
         private void getRankingsTickerButton_Click(object sender, EventArgs e)
         {
+            updateRankingsTicker();
+        }
+
+        private void updateRankingsTicker()
+        {
             StringBuilder sb = new StringBuilder();
 
             List<CCApi.Ranking> rankings = CCApi.getRankings();
@@ -1167,10 +1182,21 @@ namespace CCHelper2
                     latestMatchIndex = row.Index;
                     row.Selected = false;
                 }
-                else
+
+                switch (row.Cells["Winner"].Value.ToString())
                 {
-                    break;
-                }
+                    case "R":
+                        row.DefaultCellStyle.BackColor = Color.LightCoral;
+                        break;
+                    case "B":
+                        row.DefaultCellStyle.BackColor = Color.LightBlue;
+                        break;
+                    case "T":
+                        row.DefaultCellStyle.BackColor = Color.Khaki;
+                        break;
+                    default:
+                        break;
+                }    
             }
 
             nextMatchDataGridView.Rows[latestMatchIndex+1].Selected = true;
@@ -1203,17 +1229,24 @@ namespace CCHelper2
                     latestMatchIndex = row.Index;
                     row.Selected = false;
                 }
-                else
+
+                switch (row.Cells["Winner"].Value.ToString())
                 {
-                    break;
-                }
+                    case "R":
+                        row.DefaultCellStyle.BackColor = Color.LightCoral;
+                        break;
+                    case "B":
+                        row.DefaultCellStyle.BackColor = Color.LightBlue;
+                        break;
+                    case "T":
+                        row.DefaultCellStyle.BackColor = Color.Khaki;
+                        break;
+                    default:
+                        break;
+                }                
             }
 
             postMatchDataGridView.Rows[latestMatchIndex].Selected = true;
-            this.postMatchDataGridView.Columns["BlueCanEfficiency"].DefaultCellStyle.Format = "0%";
-            this.postMatchDataGridView.Columns["BlueCanEfficiency"].ValueType = typeof(Double);
-            this.postMatchDataGridView.Columns["RedCanEfficiency"].DefaultCellStyle.Format = "0%";
-            this.postMatchDataGridView.Columns["RedCanEfficiency"].ValueType = typeof(Double);
             postMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
         }
 
@@ -1224,16 +1257,72 @@ namespace CCHelper2
 
         private void bracketRefreshButton_Click(object sender, EventArgs e)
         {
-            ccMatches = CCApi.getMatches("elimination");
+            List<CCApi.Match> elimMatches = CCApi.getMatches("elimination");
             CCApi.updateAlliances();
             List<CCApi.BracketMatch> simpleMatches = new List<CCApi.BracketMatch>();
 
-            foreach (CCApi.Match m in ccMatches)
+            foreach (CCApi.Match m in elimMatches)
             {
                 simpleMatches.Add(m.ToBracketMatch());
             }
 
             bracketDataGridView.DataSource = simpleMatches;
+
+            foreach (DataGridViewRow row in bracketDataGridView.Rows)
+            {
+                switch (row.Cells["Winner"].Value.ToString())
+                {
+                    case "R":
+                        row.DefaultCellStyle.BackColor = Color.LightCoral;
+                        break;
+                    case "B":
+                        row.DefaultCellStyle.BackColor = Color.LightBlue;
+                        break;
+                    case "T":
+                        row.DefaultCellStyle.BackColor = Color.Khaki;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        private string setBotPic(int team, string position)
+        {
+            string teamPic = Path.Combine(Properties.Settings.Default.botPicsLocation, team.ToString() + ".png");
+            string positionPic = Path.Combine(Properties.Settings.Default.botPicsLocation, position + ".png");
+            if (File.Exists(teamPic))
+            {
+                File.Copy(teamPic, position, true);
+            }
+            else
+            {
+                Bitmap placeHolder = new Bitmap(400, 300);
+                Graphics canvas = Graphics.FromImage(placeHolder);
+                Rectangle rect1 = new Rectangle(0, 0, 400, 300);
+                Font font1 = new Font("futura_lt_medium", 48, FontStyle.Bold, GraphicsUnit.Point);
+
+                // Create a StringFormat object with the each line of text, and the block 
+                // of text centered on the page.
+                StringFormat stringFormat = new StringFormat();
+                stringFormat.Alignment = StringAlignment.Center;
+                stringFormat.LineAlignment = StringAlignment.Center;
+
+                // Draw the text and the surrounding rectangle.
+                canvas.FillRectangle(Brushes.White, rect1);
+                canvas.DrawString(team.ToString(), font1, Brushes.Black, rect1, stringFormat);
+
+                placeHolder.Save(positionPic, ImageFormat.Png);
+            }
+
+            return positionPic;
+        }
+
+        private void launchTickerWindowButton_Click(object sender, EventArgs e)
+        {
+            TickerWindow tw = new TickerWindow();
+
+            tw.Show();
         }
 
     }

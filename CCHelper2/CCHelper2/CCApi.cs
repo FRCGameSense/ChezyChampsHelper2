@@ -117,6 +117,7 @@ namespace CCHelper2
                     mpfd.BlueQA = 0;
                 }
 
+                mpfd.Winner = this.Winner;
                 
                 return mpfd;
             }
@@ -144,8 +145,8 @@ namespace CCHelper2
                     mrfd.RedCappedStacks = this.Result.RedScore.GetCappedStacks();
                     mrfd.BlueCappedStacks = this.Result.BlueScore.GetCappedStacks();
 
-                    mrfd.RedCanEfficiency = this.Result.RedScore.GetCanEfficiencyRatio();
-                    mrfd.BlueCanEfficiency = this.Result.BlueScore.GetCanEfficiencyRatio();
+                    mrfd.RedCanEfficiency = Math.Round(this.Result.RedScore.GetCanEfficiencyRatio()*100,2);
+                    mrfd.BlueCanEfficiency = Math.Round(this.Result.BlueScore.GetCanEfficiencyRatio()*100, 2);
 
 
                     mrfd.CoopertitionSet = this.Result.BlueScore.CoopertitionSet;
@@ -161,6 +162,7 @@ namespace CCHelper2
                 }
 
                 mrfd.Status = this.Status;
+                mrfd.Winner = this.Winner;
 
                 return mrfd;
 
@@ -184,6 +186,7 @@ namespace CCHelper2
             public double BlueCanEfficiency { get; set; }
             public bool CoopertitionSet { get; set; }
             public bool CoopertitionStack { get; set; }
+            public string Winner { get; set; }
 
             public MatchResultsForDisplay() { }
         }
@@ -201,6 +204,7 @@ namespace CCHelper2
             public int Blue3 { get; set; }
             public double RedQA { get; set; }
             public double BlueQA { get; set; }
+            public string Winner { get; set; }
 
 
             public MatchPreviewForDisplay() { }

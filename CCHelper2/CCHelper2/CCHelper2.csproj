@@ -95,6 +95,12 @@
     <Compile Include="TBATeamRecord.cs" />
     <Compile Include="TBAVideo.cs" />
     <Compile Include="TBAWebcast.cs" />
+    <Compile Include="TickerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TickerWindow.Designer.cs">
+      <DependentUpon>TickerWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="xSplitHandler2.cs" />
     <EmbeddedResource Include="BTLQuestionForm.resx">
       <DependentUpon>BTLQuestionForm.cs</DependentUpon>
@@ -115,6 +121,9 @@
     <EmbeddedResource Include="SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TickerWindow.resx">
+      <DependentUpon>TickerWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -130,7 +139,29 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\futura-lt-heavy.ttf" />
+    <None Include="Resources\futura-lt-light.ttf" />
+    <None Include="Resources\futura-lt-medium.ttf" />
     <None Include="Resources\streamcontrol.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="ShockwaveFlashObjects">
+      <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
