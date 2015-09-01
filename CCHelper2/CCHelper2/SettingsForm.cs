@@ -43,6 +43,7 @@ namespace CCHelper2
             Properties.Settings.Default.graphicsFolderLocation = settingsBTLFolderLocationBox.Text;
             Properties.Settings.Default.apiUrl = apiUrlBox.Text;
             Properties.Settings.Default.botPicsLocation = botPicsLocationBox.Text;
+            Properties.Settings.Default.enablePublishButton = enablePublishButtonCheckBox.Checked;
             Properties.Settings.Default.Save();
             this.Close();
         }
@@ -53,6 +54,7 @@ namespace CCHelper2
             settingsBTLFolderLocationBox.Text = Properties.Settings.Default.graphicsFolderLocation;
             botPicsLocationBox.Text = Properties.Settings.Default.botPicsLocation;
             apiUrlBox.Text = Properties.Settings.Default.apiUrl;
+            enablePublishButtonCheckBox.Checked = Properties.Settings.Default.enablePublishButton;
             if (Properties.Settings.Default.twitterVerified)
             {
                 twitterConnectbutton.Enabled = false;

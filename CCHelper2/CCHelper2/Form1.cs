@@ -484,6 +484,7 @@ namespace CCHelper2
         {
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.ShowDialog();
+            publishButton.Enabled = Properties.Settings.Default.enablePublishButton;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

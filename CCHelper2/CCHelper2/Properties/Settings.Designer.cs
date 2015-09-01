@@ -310,5 +310,17 @@ namespace CCHelper2.Properties {
                 this["tickerWindowLocation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool enablePublishButton {
+            get {
+                return ((bool)(this["enablePublishButton"]));
+            }
+            set {
+                this["enablePublishButton"] = value;
+            }
+        }
     }
 }
