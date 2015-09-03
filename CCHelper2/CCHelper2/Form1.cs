@@ -102,9 +102,9 @@ namespace CCHelper2
 
                     string xml = System.IO.Path.Combine(Properties.Settings.Default.GSFolderLocation, "Software", "streamcontrol_base.xml");
                     xsHandler.copyStreamControlXMLToXsplitLocation(Properties.Settings.Default.XsplitInstallLocation);
-                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_medium.tff", Properties.Resources.futura_lt_medium);
-                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_light.tff", Properties.Resources.futura_lt_light);
-                    File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_heavy.tff", Properties.Resources.futura_lt_heavy);
+                    //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_medium.tff", Properties.Resources.futura_lt_medium);
+                    //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_light.tff", Properties.Resources.futura_lt_light);
+                    //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_heavy.tff", Properties.Resources.futura_lt_heavy);
                 }
                 Properties.Settings.Default.Save();
             }
@@ -136,6 +136,7 @@ namespace CCHelper2
             Properties.Settings.Default.Save();
 
             dateTextBox.Text = DateTime.Now.ToShortDateString();
+            publishButton.Enabled = Properties.Settings.Default.enablePublishButton;
         }
 
         /// <summary>
@@ -1313,6 +1314,7 @@ namespace CCHelper2
                 canvas.FillRectangle(Brushes.White, rect1);
                 canvas.DrawString(team.ToString(), font1, Brushes.Black, rect1, stringFormat);
 
+                placeHolder.Save(teamPic, ImageFormat.Png);
                 placeHolder.Save(positionPic, ImageFormat.Png);
             }
 
@@ -1324,6 +1326,43 @@ namespace CCHelper2
             TickerWindow tw = new TickerWindow();
 
             tw.Show();
+        }
+
+        private void teamLookupButton_Click(object sender, EventArgs e)
+        {
+            ccMatches = CCApi.getMatches("qualification");
+            ccMatches.AddRange(CCApi.getMatches("elimination"));
+            string imageLocation = Path.Combine(Properties.Settings.Default.botPicsLocation, teamLookupBox.Text + ".png");
+            if (File.Exists(imageLocation))
+            {
+                teamLookupPictureBox.ImageLocation = imageLocation;
+            }
+
+            //List<CCApi.Ranking> rankings = CCApi.getRankings();
+
+            //teamLookupDataGridView.DataSource = new List<CCApi.Ranking> {rankings.Find(i => i.TeamId == Convert.ToInt32(teamLookupBox.Text))};
+
+            int team = Convert.ToInt32(teamLookupBox.Text);
+
+            List<CCApi.Match> teamMatches = ccMatches.FindAll(i => (i.Blue1 == team || i.Blue2 == team || i.Blue3 == team || i.Red1 == team || i.Red2 == team || i.Red3 == team));
+
+            List<CCApi.MatchResultsForDisplay> teamMatchesForDisplay = new List<CCApi.MatchResultsForDisplay>();
+            foreach (CCApi.Match match in teamMatches)
+            {
+                teamMatchesForDisplay.Add(match.ToMatchResultsForDisplay());
+            }
+
+            teamLookupDataGridView.DataSource = teamMatchesForDisplay;
+            teamLookupDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl1.SelectedTab.Name)
+            {
+                case "teamLookupTab":
+                    break;
+            }
         }
 
     }
