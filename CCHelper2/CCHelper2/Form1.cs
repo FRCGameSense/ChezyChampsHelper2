@@ -348,7 +348,18 @@ namespace CCHelper2
 
                 foreach (DataGridViewCell cell in selectedRow.Cells)
                 {
-                    xsHandler.changeXMLTag("postMatch" + cell.OwningColumn.Name, cell.Value.ToString());
+                    string value = "";
+                    if (cell.OwningColumn.Name.Contains("CanEfficiency"))
+                    {
+                        value = String.Format("{0:N2}%", cell.Value);
+                    }
+                    else
+                    {
+                        value = cell.Value.ToString();
+                    }
+
+                    xsHandler.changeXMLTag("postMatch" + cell.OwningColumn.Name, value);
+
                 }
 
                 CCApi.Match selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString());
@@ -1330,30 +1341,134 @@ namespace CCHelper2
 
         private void teamLookupButton_Click(object sender, EventArgs e)
         {
-            ccMatches = CCApi.getMatches("qualification");
-            ccMatches.AddRange(CCApi.getMatches("elimination"));
+            List<CCApi.Match> lookupMatches = new List<CCApi.Match>();
+
+            if (includeQualificationsCheckbox.Checked)
+            {
+                lookupMatches.AddRange(CCApi.getMatches("qualification"));
+            }
+            if (includeElimsCheckbox.Checked)
+            {
+                lookupMatches.AddRange(CCApi.getMatches("elimination"));
+            }
+
             string imageLocation = Path.Combine(Properties.Settings.Default.botPicsLocation, teamLookupBox.Text + ".png");
+            double averageCanEfficiency = 0;
+            double qualificationAverage = 0;
+            double autoAverage = 0;
+            double coopAverage = 0;
+            double stackAverage = 0;
+            int numStacks = 0;
+            int numPlayedMatches = 0;
+
             if (File.Exists(imageLocation))
             {
                 teamLookupPictureBox.ImageLocation = imageLocation;
             }
 
-            //List<CCApi.Ranking> rankings = CCApi.getRankings();
+            List<CCApi.Ranking> rankings = CCApi.getRankings();
 
-            //teamLookupDataGridView.DataSource = new List<CCApi.Ranking> {rankings.Find(i => i.TeamId == Convert.ToInt32(teamLookupBox.Text))};
+            CCApi.Ranking rank = rankings.Find(i => i.TeamId == Convert.ToInt32(teamLookupBox.Text));
 
-            int team = Convert.ToInt32(teamLookupBox.Text);
-
-            List<CCApi.Match> teamMatches = ccMatches.FindAll(i => (i.Blue1 == team || i.Blue2 == team || i.Blue3 == team || i.Red1 == team || i.Red2 == team || i.Red3 == team));
-
-            List<CCApi.MatchResultsForDisplay> teamMatchesForDisplay = new List<CCApi.MatchResultsForDisplay>();
-            foreach (CCApi.Match match in teamMatches)
+            if (rank != null)
             {
-                teamMatchesForDisplay.Add(match.ToMatchResultsForDisplay());
-            }
 
-            teamLookupDataGridView.DataSource = teamMatchesForDisplay;
-            teamLookupDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                int team = Convert.ToInt32(teamLookupBox.Text);
+
+                List<CCApi.Match> teamMatches = lookupMatches.FindAll(i => (i.Blue1 == team || i.Blue2 == team || i.Blue3 == team || i.Red1 == team || i.Red2 == team || i.Red3 == team));
+
+                List<CCApi.MatchResultsForDisplay> teamMatchesForDisplay = new List<CCApi.MatchResultsForDisplay>();
+                foreach (CCApi.Match match in teamMatches)
+                {
+                    CCApi.MatchResultsForDisplay mrfd = match.ToMatchResultsForDisplay();
+                    teamMatchesForDisplay.Add(mrfd);
+
+                    if (mrfd.Status == "complete")
+                    {
+                        numPlayedMatches++;
+                        if (mrfd.RedAlliance.Contains(team.ToString()))
+                        {
+                            averageCanEfficiency += mrfd.RedCanEfficiency;
+                            qualificationAverage += mrfd.RedScore;
+                            if (match.Result != null)
+                            {
+                                autoAverage += match.Result.RedScore.GetAutoPoints();
+                                coopAverage += match.Result.RedScore.GetCoopPoints();
+                                if (match.Result.RedScore.Stacks != null)
+                                {
+                                    foreach (CCApi.Stack stack in match.Result.RedScore.Stacks)
+                                    {
+                                        stackAverage += stack.GetValue();
+                                        numStacks++;
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            averageCanEfficiency += mrfd.BlueCanEfficiency;
+                            qualificationAverage += mrfd.BlueScore;
+                            if (match.Result != null)
+                            {
+                                autoAverage += match.Result.BlueScore.GetAutoPoints();
+                                coopAverage += match.Result.BlueScore.GetCoopPoints();
+                                if (match.Result.BlueScore.Stacks != null)
+                                {
+                                    foreach (CCApi.Stack stack in match.Result.BlueScore.Stacks)
+                                    {
+                                        stackAverage += stack.GetValue();
+                                        numStacks++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+
+                averageCanEfficiency /= numPlayedMatches;
+                qualificationAverage /= numPlayedMatches;
+                autoAverage /= numPlayedMatches;
+                coopAverage /= numPlayedMatches;
+                stackAverage /= numStacks;
+
+                rankLabel.Text = rank.Rank.ToString();
+                cerLabel.Text = averageCanEfficiency.ToString("0.00") + "%";
+                qaLabel.Text = qualificationAverage.ToString("0.00");
+                autoLabel.Text = autoAverage.ToString("0.00");
+                coopLabel.Text = coopAverage.ToString("0.00");
+                stacksLabel.Text = stackAverage.ToString("0.00");
+
+                teamLookupDataGridView.DataSource = teamMatchesForDisplay;
+
+                foreach (DataGridViewRow row in teamLookupDataGridView.Rows)
+                {
+                    switch (row.Cells["Winner"].Value.ToString())
+                    {
+                        case "R":
+                            row.DefaultCellStyle.BackColor = Color.LightCoral;
+                            break;
+                        case "B":
+                            row.DefaultCellStyle.BackColor = Color.LightBlue;
+                            break;
+                        case "T":
+                            row.DefaultCellStyle.BackColor = Color.Khaki;
+                            break;
+                        default:
+                            break;
+                    }
+
+                    if (row.Cells["RedAlliance"].Value.ToString().Contains(team.ToString()))
+                    {
+                        row.Cells["RedAlliance"].Style.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
+                    }
+                    else
+                    {
+                        row.Cells["BlueAlliance"].Style.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
+                    }                    
+                }
+                teamLookupDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1364,6 +1479,7 @@ namespace CCHelper2
                     break;
             }
         }
+
 
     }
 }

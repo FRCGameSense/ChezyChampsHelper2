@@ -265,7 +265,7 @@ namespace CCHelper2.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://cheesy-arena-demo.team254.com:8080/api/")]
         public string apiUrl {
             get {
                 return ((string)(this["apiUrl"]));

@@ -63,7 +63,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="apiUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">http://cheesy-arena-demo.team254.com:8080/api/</Value>
     </Setting>
     <Setting Name="graphicsFolderLocation" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

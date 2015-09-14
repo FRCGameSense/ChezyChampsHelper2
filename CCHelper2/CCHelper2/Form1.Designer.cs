@@ -131,10 +131,24 @@
             this.bracketDataGridView = new System.Windows.Forms.DataGridView();
             this.bracketRefreshButton = new System.Windows.Forms.Button();
             this.teamLookupTab = new System.Windows.Forms.TabPage();
+            this.cerLabel = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.qaLabel = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.teamLookupDataGridView = new System.Windows.Forms.DataGridView();
+            this.teamLookupBox = new System.Windows.Forms.TextBox();
             this.teamLookupButton = new System.Windows.Forms.Button();
             this.teamLookupPictureBox = new System.Windows.Forms.PictureBox();
-            this.teamLookupBox = new System.Windows.Forms.TextBox();
-            this.teamLookupDataGridView = new System.Windows.Forms.DataGridView();
+            this.includeQualificationsCheckbox = new System.Windows.Forms.CheckBox();
+            this.includeElimsCheckbox = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.rankLabel = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.autoLabel = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.coopLabel = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.stacksLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalTickerDataGridView)).BeginInit();
             this.tickerTab.SuspendLayout();
@@ -154,8 +168,8 @@
             this.bracketTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bracketDataGridView)).BeginInit();
             this.teamLookupTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLookupPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamLookupDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamLookupPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1186,6 +1200,20 @@
             // teamLookupTab
             // 
             this.teamLookupTab.BackColor = System.Drawing.Color.DarkGray;
+            this.teamLookupTab.Controls.Add(this.includeElimsCheckbox);
+            this.teamLookupTab.Controls.Add(this.includeQualificationsCheckbox);
+            this.teamLookupTab.Controls.Add(this.stacksLabel);
+            this.teamLookupTab.Controls.Add(this.label19);
+            this.teamLookupTab.Controls.Add(this.coopLabel);
+            this.teamLookupTab.Controls.Add(this.label18);
+            this.teamLookupTab.Controls.Add(this.autoLabel);
+            this.teamLookupTab.Controls.Add(this.label17);
+            this.teamLookupTab.Controls.Add(this.cerLabel);
+            this.teamLookupTab.Controls.Add(this.label15);
+            this.teamLookupTab.Controls.Add(this.rankLabel);
+            this.teamLookupTab.Controls.Add(this.label16);
+            this.teamLookupTab.Controls.Add(this.qaLabel);
+            this.teamLookupTab.Controls.Add(this.label14);
             this.teamLookupTab.Controls.Add(this.teamLookupDataGridView);
             this.teamLookupTab.Controls.Add(this.teamLookupBox);
             this.teamLookupTab.Controls.Add(this.teamLookupButton);
@@ -1197,37 +1225,53 @@
             this.teamLookupTab.TabIndex = 12;
             this.teamLookupTab.Text = "Lookup";
             // 
-            // teamLookupButton
+            // cerLabel
             // 
-            this.teamLookupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
-            this.teamLookupButton.FlatAppearance.BorderSize = 0;
-            this.teamLookupButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.teamLookupButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
-            this.teamLookupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.teamLookupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.teamLookupButton.Location = new System.Drawing.Point(112, 13);
-            this.teamLookupButton.Name = "teamLookupButton";
-            this.teamLookupButton.Size = new System.Drawing.Size(82, 33);
-            this.teamLookupButton.TabIndex = 14;
-            this.teamLookupButton.Text = "Look Up";
-            this.teamLookupButton.UseVisualStyleBackColor = false;
-            this.teamLookupButton.Click += new System.EventHandler(this.teamLookupButton_Click);
+            this.cerLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.cerLabel.AutoSize = true;
+            this.cerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerLabel.ForeColor = System.Drawing.Color.Black;
+            this.cerLabel.Location = new System.Drawing.Point(39, 406);
+            this.cerLabel.Name = "cerLabel";
+            this.cerLabel.Size = new System.Drawing.Size(70, 24);
+            this.cerLabel.TabIndex = 17;
+            this.cerLabel.Text = "XXXX";
+            this.cerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // teamLookupPictureBox
+            // label15
             // 
-            this.teamLookupPictureBox.Location = new System.Drawing.Point(6, 52);
-            this.teamLookupPictureBox.Name = "teamLookupPictureBox";
-            this.teamLookupPictureBox.Size = new System.Drawing.Size(400, 300);
-            this.teamLookupPictureBox.TabIndex = 0;
-            this.teamLookupPictureBox.TabStop = false;
+            this.label15.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(4, 413);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "CER:";
             // 
-            // teamLookupBox
+            // qaLabel
             // 
-            this.teamLookupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teamLookupBox.Location = new System.Drawing.Point(6, 13);
-            this.teamLookupBox.Name = "teamLookupBox";
-            this.teamLookupBox.Size = new System.Drawing.Size(100, 31);
-            this.teamLookupBox.TabIndex = 15;
+            this.qaLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.qaLabel.AutoSize = true;
+            this.qaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qaLabel.ForeColor = System.Drawing.Color.Black;
+            this.qaLabel.Location = new System.Drawing.Point(39, 382);
+            this.qaLabel.Name = "qaLabel";
+            this.qaLabel.Size = new System.Drawing.Size(70, 24);
+            this.qaLabel.TabIndex = 17;
+            this.qaLabel.Text = "XXXX";
+            this.qaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label14
+            // 
+            this.label14.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(4, 389);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "QA: ";
             // 
             // teamLookupDataGridView
             // 
@@ -1270,6 +1314,160 @@
             this.teamLookupDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle34;
             this.teamLookupDataGridView.Size = new System.Drawing.Size(689, 416);
             this.teamLookupDataGridView.TabIndex = 16;
+            // 
+            // teamLookupBox
+            // 
+            this.teamLookupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teamLookupBox.Location = new System.Drawing.Point(6, 13);
+            this.teamLookupBox.Name = "teamLookupBox";
+            this.teamLookupBox.Size = new System.Drawing.Size(100, 31);
+            this.teamLookupBox.TabIndex = 15;
+            // 
+            // teamLookupButton
+            // 
+            this.teamLookupButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(44)))), ((int)(((byte)(40)))));
+            this.teamLookupButton.FlatAppearance.BorderSize = 0;
+            this.teamLookupButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.teamLookupButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
+            this.teamLookupButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.teamLookupButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
+            this.teamLookupButton.Location = new System.Drawing.Point(112, 13);
+            this.teamLookupButton.Name = "teamLookupButton";
+            this.teamLookupButton.Size = new System.Drawing.Size(82, 33);
+            this.teamLookupButton.TabIndex = 14;
+            this.teamLookupButton.Text = "Look Up";
+            this.teamLookupButton.UseVisualStyleBackColor = false;
+            this.teamLookupButton.Click += new System.EventHandler(this.teamLookupButton_Click);
+            // 
+            // teamLookupPictureBox
+            // 
+            this.teamLookupPictureBox.Location = new System.Drawing.Point(6, 52);
+            this.teamLookupPictureBox.Name = "teamLookupPictureBox";
+            this.teamLookupPictureBox.Size = new System.Drawing.Size(400, 300);
+            this.teamLookupPictureBox.TabIndex = 0;
+            this.teamLookupPictureBox.TabStop = false;
+            // 
+            // includeQualificationsCheckbox
+            // 
+            this.includeQualificationsCheckbox.AutoSize = true;
+            this.includeQualificationsCheckbox.Checked = true;
+            this.includeQualificationsCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.includeQualificationsCheckbox.ForeColor = System.Drawing.Color.Black;
+            this.includeQualificationsCheckbox.Location = new System.Drawing.Point(423, 27);
+            this.includeQualificationsCheckbox.Name = "includeQualificationsCheckbox";
+            this.includeQualificationsCheckbox.Size = new System.Drawing.Size(89, 17);
+            this.includeQualificationsCheckbox.TabIndex = 18;
+            this.includeQualificationsCheckbox.Text = "Qualifications";
+            this.includeQualificationsCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // includeElimsCheckbox
+            // 
+            this.includeElimsCheckbox.AutoSize = true;
+            this.includeElimsCheckbox.Checked = true;
+            this.includeElimsCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.includeElimsCheckbox.ForeColor = System.Drawing.Color.Black;
+            this.includeElimsCheckbox.Location = new System.Drawing.Point(518, 27);
+            this.includeElimsCheckbox.Name = "includeElimsCheckbox";
+            this.includeElimsCheckbox.Size = new System.Drawing.Size(81, 17);
+            this.includeElimsCheckbox.TabIndex = 19;
+            this.includeElimsCheckbox.Text = "Eliminations";
+            this.includeElimsCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(4, 365);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "RANK:";
+            // 
+            // rankLabel
+            // 
+            this.rankLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.rankLabel.AutoSize = true;
+            this.rankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rankLabel.ForeColor = System.Drawing.Color.Black;
+            this.rankLabel.Location = new System.Drawing.Point(39, 358);
+            this.rankLabel.Name = "rankLabel";
+            this.rankLabel.Size = new System.Drawing.Size(70, 24);
+            this.rankLabel.TabIndex = 17;
+            this.rankLabel.Text = "XXXX";
+            this.rankLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(138, 365);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "AUTO:";
+            // 
+            // autoLabel
+            // 
+            this.autoLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.autoLabel.AutoSize = true;
+            this.autoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.autoLabel.ForeColor = System.Drawing.Color.Black;
+            this.autoLabel.Location = new System.Drawing.Point(174, 358);
+            this.autoLabel.Name = "autoLabel";
+            this.autoLabel.Size = new System.Drawing.Size(70, 24);
+            this.autoLabel.TabIndex = 17;
+            this.autoLabel.Text = "XXXX";
+            this.autoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(138, 389);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(40, 13);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "COOP:";
+            // 
+            // coopLabel
+            // 
+            this.coopLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.coopLabel.AutoSize = true;
+            this.coopLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coopLabel.ForeColor = System.Drawing.Color.Black;
+            this.coopLabel.Location = new System.Drawing.Point(174, 382);
+            this.coopLabel.Name = "coopLabel";
+            this.coopLabel.Size = new System.Drawing.Size(70, 24);
+            this.coopLabel.TabIndex = 17;
+            this.coopLabel.Text = "XXXX";
+            this.coopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(133, 414);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 13);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "STACK:";
+            // 
+            // stacksLabel
+            // 
+            this.stacksLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.stacksLabel.AutoSize = true;
+            this.stacksLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stacksLabel.ForeColor = System.Drawing.Color.Black;
+            this.stacksLabel.Location = new System.Drawing.Point(174, 407);
+            this.stacksLabel.Name = "stacksLabel";
+            this.stacksLabel.Size = new System.Drawing.Size(70, 24);
+            this.stacksLabel.TabIndex = 17;
+            this.stacksLabel.Text = "XXXX";
+            this.stacksLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -1319,8 +1517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bracketDataGridView)).EndInit();
             this.teamLookupTab.ResumeLayout(false);
             this.teamLookupTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.teamLookupPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teamLookupDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamLookupPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1399,6 +1597,20 @@
         private System.Windows.Forms.PictureBox teamLookupPictureBox;
         private System.Windows.Forms.TextBox teamLookupBox;
         private System.Windows.Forms.DataGridView teamLookupDataGridView;
+        private System.Windows.Forms.Label qaLabel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label cerLabel;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.CheckBox includeElimsCheckbox;
+        private System.Windows.Forms.CheckBox includeQualificationsCheckbox;
+        private System.Windows.Forms.Label rankLabel;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label stacksLabel;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label coopLabel;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label autoLabel;
+        private System.Windows.Forms.Label label17;
     }
 }
 

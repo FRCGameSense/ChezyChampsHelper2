@@ -142,6 +142,9 @@ namespace CCHelper2
                     mrfd.RedAutoScore = this.Result.RedScore.GetAutoPoints();
                     mrfd.BlueAutoScore = this.Result.BlueScore.GetAutoPoints();
 
+                    mrfd.RedFoulPoints = this.Result.RedScore.GetFoulPoints();
+                    mrfd.BlueFoulPoints = this.Result.BlueScore.GetFoulPoints();
+
                     mrfd.RedCappedStacks = this.Result.RedScore.GetCappedStacks();
                     mrfd.BlueCappedStacks = this.Result.BlueScore.GetCappedStacks();
 
@@ -180,6 +183,8 @@ namespace CCHelper2
             public int BlueScore { get; set; }
             public int RedAutoScore { get; set; }
             public int BlueAutoScore { get; set; }
+            public int RedFoulPoints { get; set; }
+            public int BlueFoulPoints { get; set; }
             public int RedCappedStacks { get; set; }
             public int BlueCappedStacks { get; set; }
             public double RedCanEfficiency { get; set; }
@@ -250,6 +255,16 @@ namespace CCHelper2
 
             public Score() { }
 
+            public int GetCoopPoints()
+            {
+                int score = 0;
+
+                score += CoopertitionSet ? 20 : 0;
+                score += CoopertitionStack ? 40 : 0;
+
+                return score;
+            }
+
             public int GetAutoPoints()
             {
                 int score = 0;
@@ -258,6 +273,21 @@ namespace CCHelper2
                 score += AutoContainerSet ? 8 : 0;
                 score += AutoToteSet ? 6 : 0;
                 score += AutoStackedToteSet ? 20 : 0;
+
+                return score;
+            }
+
+            public int GetFoulPoints()
+            {
+                int score = 0;
+
+                if (Fouls != null)
+                {
+                    foreach (Foul f in Fouls)
+                    {
+                        score -= 6;
+                    }
+                }
 
                 return score;
             }
@@ -278,13 +308,7 @@ namespace CCHelper2
                     }
                 }
 
-                if (Fouls != null)
-                {
-                    foreach (Foul f in Fouls)
-                    {
-                        score -= 6;
-                    }
-                }
+                score += GetFoulPoints();
 
                 return score;
             }
