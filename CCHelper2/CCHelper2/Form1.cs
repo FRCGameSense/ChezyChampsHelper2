@@ -191,6 +191,7 @@ namespace CCHelper2
             verticalTickerDataGridView.Rows[Properties.Settings.Default.currentTopic].Selected = true;
             publishTopics();
             updateRankingsTicker();
+            updateTop10();
             publishTicker();
 
             switch (tabControl1.SelectedTab.Name)
@@ -1170,6 +1171,20 @@ namespace CCHelper2
             }
 
             tickerTextBox.Text = sb.ToString();
+        }
+
+        private void updateTop10()
+        {
+            xsHandler.loadTagsFromXML();
+
+            List<CCApi.Ranking> rankings = CCApi.getRankings();
+
+            foreach (CCApi.Ranking rank in rankings)
+            {
+                xsHandler.changeXMLTag("Rank" + rank.Rank.ToString(), rank.ToString());
+            }
+
+            xsHandler.writeXMLFile();
         }
 
         private void nextMatchRefreshButton_Click(object sender, EventArgs e)
