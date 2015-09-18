@@ -24,3 +24,7 @@ C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\D
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\AxInterop.ShockwaveFlashObjects.dll
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.csproj.ResolveComReference.cache
 C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.TickerWindow.resources
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\CCHelper2.exe.manifest
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\CCHelper2.application
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.exe.manifest
+C:\Users\ttremblay\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.application

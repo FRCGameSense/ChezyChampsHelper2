@@ -1190,49 +1190,54 @@ namespace CCHelper2
         private void nextMatchRefreshButton_Click(object sender, EventArgs e)
         {
             ccMatches = CCApi.getMatches("qualification");
-            ccMatches.AddRange(CCApi.getMatches("elimination"));
 
-            List<CCApi.MatchPreviewForDisplay> matchPreviews = new List<CCApi.MatchPreviewForDisplay>();
-
-            foreach (CCApi.Match m in ccMatches)
+            if (ccMatches != null)
             {
-                matchPreviews.Add(m.ToMatchPreviewForDisplay());
-            }
+                ccMatches.AddRange(CCApi.getMatches("elimination"));
 
-            nextMatchDataGridView.DataSource = matchPreviews;
 
-            int latestMatchIndex = 0;
+                List<CCApi.MatchPreviewForDisplay> matchPreviews = new List<CCApi.MatchPreviewForDisplay>();
 
-            foreach (DataGridViewRow row in nextMatchDataGridView.Rows)
-            {
-                if (row.Cells["Status"].Value.ToString() == "complete")
+                foreach (CCApi.Match m in ccMatches)
                 {
-                    latestMatchIndex = row.Index;
-                    row.Selected = false;
+                    matchPreviews.Add(m.ToMatchPreviewForDisplay());
                 }
 
-                switch (row.Cells["Winner"].Value.ToString())
-                {
-                    case "R":
-                        row.DefaultCellStyle.BackColor = Color.LightCoral;
-                        break;
-                    case "B":
-                        row.DefaultCellStyle.BackColor = Color.LightBlue;
-                        break;
-                    case "T":
-                        row.DefaultCellStyle.BackColor = Color.Khaki;
-                        break;
-                    default:
-                        break;
-                }    
-            }
+                nextMatchDataGridView.DataSource = matchPreviews;
 
-            nextMatchDataGridView.Rows[latestMatchIndex+1].Selected = true;
-            this.nextMatchDataGridView.Columns["RedQA"].DefaultCellStyle.Format = "0.00";
-            this.nextMatchDataGridView.Columns["RedQA"].ValueType = typeof(Double);
-            this.nextMatchDataGridView.Columns["BlueQA"].DefaultCellStyle.Format = "0.00";
-            this.nextMatchDataGridView.Columns["BlueQA"].ValueType = typeof(Double);
-            nextMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                int latestMatchIndex = 0;
+
+                foreach (DataGridViewRow row in nextMatchDataGridView.Rows)
+                {
+                    if (row.Cells["Status"].Value.ToString() == "complete")
+                    {
+                        latestMatchIndex = row.Index;
+                        row.Selected = false;
+                    }
+
+                    switch (row.Cells["Winner"].Value.ToString())
+                    {
+                        case "R":
+                            row.DefaultCellStyle.BackColor = Color.LightCoral;
+                            break;
+                        case "B":
+                            row.DefaultCellStyle.BackColor = Color.LightBlue;
+                            break;
+                        case "T":
+                            row.DefaultCellStyle.BackColor = Color.Khaki;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                nextMatchDataGridView.Rows[latestMatchIndex + 1].Selected = true;
+                this.nextMatchDataGridView.Columns["RedQA"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["RedQA"].ValueType = typeof(Double);
+                this.nextMatchDataGridView.Columns["BlueQA"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["BlueQA"].ValueType = typeof(Double);
+                nextMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
         }
 
         private void postMatchRefreshButton_Click(object sender, EventArgs e)

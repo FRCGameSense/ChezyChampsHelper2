@@ -461,7 +461,7 @@ namespace CCHelper2
             List<Match> elimMatches = getMatches("elimination");
             alliances = new List<string>();
 
-            if (elimMatches != null)
+            if (elimMatches.Count > 0)
             {
                 alliances.Add(elimMatches.Find(i => i.DisplayName.StartsWith("QF1-1")).GetRedAllianceString());
                 alliances.Add(elimMatches.Find(i => i.DisplayName.StartsWith("QF3-1")).GetRedAllianceString());
@@ -495,6 +495,8 @@ namespace CCHelper2
                 request.Accept = "application/json";
                 request.ContentLength = 0;
 
+                //request.Headers.Add("reader1234Five");
+
                 string responseContent = null;
 
                 try
@@ -510,9 +512,8 @@ namespace CCHelper2
                     return responseContent;
                 }
                 catch (Exception ex)
-                {
+                {                    
                     Console.WriteLine(ex.Message);
-
                 }
                 return responseContent;
             }
