@@ -90,7 +90,15 @@ namespace CCHelper2
                 MatchPreviewForDisplay mpfd = new MatchPreviewForDisplay();
 
                 mpfd.Type = this.Type;
-                mpfd.DisplayName = this.DisplayName;
+
+                if (this.DisplayName.StartsWith("Q") || this.DisplayName.StartsWith("S") || this.DisplayName.StartsWith("F"))
+                {
+                    mpfd.DisplayName = this.DisplayName;
+                }
+                else
+                {
+                    mpfd.DisplayName = "Q" + this.DisplayName;
+                }
 
                 mpfd.Status = this.Status;
 
@@ -107,9 +115,17 @@ namespace CCHelper2
                 try
                 {
                     double rawRedQA = (ranks.Find(i => i.TeamId == Red1).QualificationAverage + ranks.Find(i => i.TeamId == Red2).QualificationAverage + ranks.Find(i => i.TeamId == Red3).QualificationAverage) / 3;
+                    double rawRedCanAvg = (ranks.Find(i => i.TeamId == Red1).ContainerPoints + ranks.Find(i => i.TeamId == Red2).ContainerPoints + ranks.Find(i => i.TeamId == Red3).ContainerPoints) / 3;
+                    double rawRedCoopAvg = (ranks.Find(i => i.TeamId == Red1).CoopertitionPoints + ranks.Find(i => i.TeamId == Red2).CoopertitionPoints + ranks.Find(i => i.TeamId == Red3).CoopertitionPoints) / 3;
                     double rawBlueQA = (ranks.Find(i => i.TeamId == Blue1).QualificationAverage + ranks.Find(i => i.TeamId == Blue2).QualificationAverage + ranks.Find(i => i.TeamId == Blue3).QualificationAverage) / 3;
+                    double rawBlueCanAvg = (ranks.Find(i => i.TeamId == Blue1).ContainerPoints + ranks.Find(i => i.TeamId == Blue2).ContainerPoints + ranks.Find(i => i.TeamId == Blue3).ContainerPoints) / 3;
+                    double rawBlueCoopAvg = (ranks.Find(i => i.TeamId == Blue1).CoopertitionPoints + ranks.Find(i => i.TeamId == Blue2).CoopertitionPoints + ranks.Find(i => i.TeamId == Blue3).CoopertitionPoints) / 3;
                     mpfd.RedQA = Math.Round(rawRedQA, 2);
+                    mpfd.RedCanAvg = Math.Round(rawRedCanAvg, 2);
+                    mpfd.RedCoopAvg = Math.Round(rawRedCoopAvg, 2);
                     mpfd.BlueQA = Math.Round(rawBlueQA, 2);
+                    mpfd.BlueCanAvg = Math.Round(rawBlueCanAvg, 2);
+                    mpfd.BlueCoopAvg = Math.Round(rawBlueCoopAvg, 2);
                 }
                 catch (NullReferenceException)
                 {
@@ -128,8 +144,16 @@ namespace CCHelper2
                 StringBuilder sb = new StringBuilder();
 
                 mrfd.Type = this.Type;
-                mrfd.DisplayName = this.DisplayName;
-                
+
+                if (this.DisplayName.StartsWith("Q") || this.DisplayName.StartsWith("S") || this.DisplayName.StartsWith("F"))
+                {
+                    mrfd.DisplayName = this.DisplayName;
+                }
+                else
+                {
+                    mrfd.DisplayName = "Q" + this.DisplayName;
+                }
+
                 mrfd.RedAlliance = GetRedAllianceString();
 
                 mrfd.BlueAlliance = GetBlueAllianceString();
@@ -208,7 +232,11 @@ namespace CCHelper2
             public int Blue2 { get; set; }
             public int Blue3 { get; set; }
             public double RedQA { get; set; }
+            public double RedCanAvg { get; set; }
+            public double RedCoopAvg { get; set; }
             public double BlueQA { get; set; }
+            public double BlueCanAvg { get; set; }
+            public double BlueCoopAvg { get; set; }
             public string Winner { get; set; }
 
 

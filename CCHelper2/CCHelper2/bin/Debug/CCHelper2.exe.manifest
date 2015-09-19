@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CCHelper2.exe" size="571904">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CCHelper2.exe" size="569856">
       <assemblyIdentity name="CCHelper2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>om1dIiE5v8JWlQJfRbcxo+FURB5cU+s+k43uRrnQ7c8=</dsig:DigestValue>
+        <dsig:DigestValue>RD4MJyr8q2p0mFm/C052Yi6JRJYDMz20p+HeUKUninA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,7 +85,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I5jTil9VlXGzvTgKkgd2PynMGfA4awe2QusB9kpkzyA=</dsig:DigestValue>
+        <dsig:DigestValue>PR/e3zpPZRKepi//OCKOzgqoXuwmgjxaQ7l6LFnUeKU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -125,13 +125,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CCHelper2.exe.config" size="3895">
+  <file name="CCHelper2.exe.config" size="4153">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+LGvxv/Ab/elsD6v28CzwUQPZcwiPtdc4x2ebVt/RtU=</dsig:DigestValue>
+      <dsig:DigestValue>3m2+uKfpke6Wo11L+3EPRkqvCKJoKQ3bkTYRhYwQ5Ok=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

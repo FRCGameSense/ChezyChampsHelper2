@@ -28,6 +28,9 @@ namespace CCHelper2
         GSBotTbaCommunicator tba = new GSBotTbaCommunicator();
         CCApi ccApi = new CCApi();
         List<CCApi.Match> ccMatches = new List<CCApi.Match>();
+        Size toteSize = new Size(40, 24);
+        Size containerSize = new Size(30, 64);
+        Size noodleSize = new Size(5, 24);
 
         public Form1()
         {
@@ -65,6 +68,8 @@ namespace CCHelper2
 
         public void CleanUpBeforeClosing()
         {
+            Properties.Settings.Default.lastWindowLocation = Location;
+            Properties.Settings.Default.lastWindowSize = Size;
             if (twitch != null)
             {
                 twitch.Stop();
@@ -77,6 +82,9 @@ namespace CCHelper2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Size = Properties.Settings.Default.lastWindowSize;
+            Location = Properties.Settings.Default.lastWindowLocation;
+
             if (Properties.Settings.Default.firstInstall)
             {
                 MessageBox.Show("Welcome to CC Helper!  Please go to settings and set your file paths.");
@@ -352,7 +360,7 @@ namespace CCHelper2
                     string value = "";
                     if (cell.OwningColumn.Name.Contains("CanEfficiency"))
                     {
-                        value = String.Format("{0:N2}%", cell.Value);
+                        value = String.Format("{0:N1}%", cell.Value);
                     }
                     else
                     {
@@ -363,7 +371,16 @@ namespace CCHelper2
 
                 }
 
-                CCApi.Match selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString());
+                CCApi.Match selectedMatch = new CCApi.Match();
+
+                if (selectedRow.Cells["Type"].Value.ToString() == "qualification")
+                {
+                    selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString().Substring(1));
+                }
+                else
+                {
+                    selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString());
+                }
 
                 string stackImagePath = generateStacksImageFromMatch(selectedMatch);
 
@@ -1021,16 +1038,16 @@ namespace CCHelper2
         private string generateStacksImageFromMatch(CCApi.Match match)
         {
             string picsFolder = Properties.Settings.Default.graphicsFolderLocation;
-            Bitmap allRedStacks = new Bitmap(525, 238);
-            Bitmap allBlueStacks = new Bitmap(525, 238);
-            Bitmap allStacks = new Bitmap(1200, 238);
+            Bitmap allRedStacks = new Bitmap((10*toteSize.Width)+18, 238);
+            Bitmap allBlueStacks = new Bitmap(allRedStacks.Size.Width, allRedStacks.Size.Height);
+            Bitmap allStacks = new Bitmap(allRedStacks.Size.Width*2 + ((toteSize.Width * 2) + 2) + 20, 238);
 
             if (match.Result.RedScore.Stacks != null)
             {
                 for (int i = 0; i < match.Result.RedScore.Stacks.Count; i++)
                 {
                     Bitmap stack = generateStackImage(match.Result.RedScore.Stacks[i], "red");
-                    Point drawLoc = new Point(50 * i, 0);
+                    Point drawLoc = new Point((toteSize.Width+2) * i, 0);
                     Graphics canvas = Graphics.FromImage(allRedStacks);
                     canvas.DrawImage(stack, drawLoc);
                 }
@@ -1041,7 +1058,7 @@ namespace CCHelper2
                 for (int i = 0; i < match.Result.BlueScore.Stacks.Count; i++)
                 {
                     Bitmap stack = generateStackImage(match.Result.BlueScore.Stacks[i], "blue");
-                    Point drawLoc = new Point(50 * i, 0);
+                    Point drawLoc = new Point((toteSize.Width + 2) * i, 0);
                     Graphics canvas = Graphics.FromImage(allBlueStacks);
                     canvas.DrawImage(stack, drawLoc);
                 }
@@ -1066,8 +1083,7 @@ namespace CCHelper2
 
         private Bitmap generateCoopertitionStackImage(CCApi.Match match)
         {
-            Size toteSize = new Size(48, 24);
-            Bitmap stackImage = new Bitmap(98, 99);
+            Bitmap stackImage = new Bitmap((toteSize.Width*2)+2, (toteSize.Height*4)+3);
             SolidBrush coopToteColor = new SolidBrush(Color.FromArgb(255,192,0));
             Graphics canvas = Graphics.FromImage(stackImage);
 
@@ -1103,11 +1119,8 @@ namespace CCHelper2
         
 
         private Bitmap generateStackImage(CCApi.Stack stack, string color)
-        {
-            Bitmap stackImage = new Bitmap(48, 238);
-            Size toteSize = new Size(48, 24);
-            Size containerSize = new Size(36, 64);
-            Size noodleSize = new Size(6, 24);
+        {            
+            Bitmap stackImage = new Bitmap(toteSize.Width, 238);
 
             using (Graphics canvas = Graphics.FromImage(stackImage))
             {
@@ -1125,14 +1138,14 @@ namespace CCHelper2
                 
                 if (stack.Container)
                 {
-                    drawLoc.X = 6;  //The container image is 12px narrower, so center it
+                    drawLoc.X = (toteSize.Width - containerSize.Width)/2;  //The container image is 12px narrower, so center it
                     drawLoc.Y -= containerSize.Height + 1;
 
                     canvas.FillRectangle(new SolidBrush(Color.DarkGreen), new Rectangle(drawLoc, containerSize));
 
                     if (stack.Litter)
                     {
-                        drawLoc.X = 21;
+                        drawLoc.X = (toteSize.Width - noodleSize.Width)/2;
                         drawLoc.Y -= noodleSize.Height;
                         Rectangle noodle = new Rectangle(drawLoc, noodleSize);
                         if (color == "red")
@@ -1165,11 +1178,13 @@ namespace CCHelper2
 
             List<CCApi.Ranking> rankings = CCApi.getRankings();
 
-            foreach (CCApi.Ranking rank in rankings)
+            if (rankings != null)
             {
-                sb.AppendFormat("{0}  ", rank.ToString());
+                foreach (CCApi.Ranking rank in rankings)
+                {
+                    sb.AppendFormat("{0}  ", rank.ToString());
+                }
             }
-
             tickerTextBox.Text = sb.ToString();
         }
 
@@ -1234,8 +1249,16 @@ namespace CCHelper2
                 nextMatchDataGridView.Rows[latestMatchIndex + 1].Selected = true;
                 this.nextMatchDataGridView.Columns["RedQA"].DefaultCellStyle.Format = "0.00";
                 this.nextMatchDataGridView.Columns["RedQA"].ValueType = typeof(Double);
+                this.nextMatchDataGridView.Columns["RedCanAvg"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["RedCanAvg"].ValueType = typeof(Double);
+                this.nextMatchDataGridView.Columns["RedCoopAvg"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["RedCoopAvg"].ValueType = typeof(Double);
                 this.nextMatchDataGridView.Columns["BlueQA"].DefaultCellStyle.Format = "0.00";
                 this.nextMatchDataGridView.Columns["BlueQA"].ValueType = typeof(Double);
+                this.nextMatchDataGridView.Columns["BlueCanAvg"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["BlueCanAvg"].ValueType = typeof(Double);
+                this.nextMatchDataGridView.Columns["BlueCoopAvg"].DefaultCellStyle.Format = "0.00";
+                this.nextMatchDataGridView.Columns["BlueCoopAvg"].ValueType = typeof(Double);
                 nextMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
             }
         }
@@ -1243,44 +1266,48 @@ namespace CCHelper2
         private void postMatchRefreshButton_Click(object sender, EventArgs e)
         {
             ccMatches = CCApi.getMatches("qualification");
-            ccMatches.AddRange(CCApi.getMatches("elimination"));
-            List<CCApi.MatchResultsForDisplay> simpleMatches = new List<CCApi.MatchResultsForDisplay>();
-
-            foreach (CCApi.Match m in ccMatches)
+            if (ccMatches != null)
             {
-                simpleMatches.Add(m.ToMatchResultsForDisplay());
-            }
+                ccMatches.AddRange(CCApi.getMatches("elimination"));
+                List<CCApi.MatchResultsForDisplay> simpleMatches = new List<CCApi.MatchResultsForDisplay>();
 
-            postMatchDataGridView.DataSource = simpleMatches;
 
-            int latestMatchIndex = 0;
-
-            foreach (DataGridViewRow row in postMatchDataGridView.Rows)
-            {
-                if (row.Cells["Status"].Value.ToString() == "complete")
+                foreach (CCApi.Match m in ccMatches)
                 {
-                    latestMatchIndex = row.Index;
-                    row.Selected = false;
+                    simpleMatches.Add(m.ToMatchResultsForDisplay());
                 }
 
-                switch (row.Cells["Winner"].Value.ToString())
-                {
-                    case "R":
-                        row.DefaultCellStyle.BackColor = Color.LightCoral;
-                        break;
-                    case "B":
-                        row.DefaultCellStyle.BackColor = Color.LightBlue;
-                        break;
-                    case "T":
-                        row.DefaultCellStyle.BackColor = Color.Khaki;
-                        break;
-                    default:
-                        break;
-                }                
-            }
+                postMatchDataGridView.DataSource = simpleMatches;
 
-            postMatchDataGridView.Rows[latestMatchIndex].Selected = true;
-            postMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+                int latestMatchIndex = 0;
+
+                foreach (DataGridViewRow row in postMatchDataGridView.Rows)
+                {
+                    if (row.Cells["Status"].Value.ToString() == "complete")
+                    {
+                        latestMatchIndex = row.Index;
+                        row.Selected = false;
+                    }
+
+                    switch (row.Cells["Winner"].Value.ToString())
+                    {
+                        case "R":
+                            row.DefaultCellStyle.BackColor = Color.LightCoral;
+                            break;
+                        case "B":
+                            row.DefaultCellStyle.BackColor = Color.LightBlue;
+                            break;
+                        case "T":
+                            row.DefaultCellStyle.BackColor = Color.Khaki;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                postMatchDataGridView.Rows[latestMatchIndex].Selected = true;
+                postMatchDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -1326,7 +1353,8 @@ namespace CCHelper2
             string positionPic = Path.Combine(Properties.Settings.Default.botPicsLocation, position + ".png");
             if (File.Exists(teamPic))
             {
-                File.Copy(teamPic, position, true);
+                //File.Delete(positionPic);
+                File.Copy(teamPic, positionPic, true);
             }
             else
             {

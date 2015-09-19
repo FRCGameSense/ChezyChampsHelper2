@@ -78,6 +78,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.tickerTab = new System.Windows.Forms.TabPage();
             this.launchTickerWindowButton = new System.Windows.Forms.Button();
             this.getRankingsTickerButton = new System.Windows.Forms.Button();
@@ -134,17 +140,11 @@
             this.includeElimsCheckbox = new System.Windows.Forms.CheckBox();
             this.includeQualificationsCheckbox = new System.Windows.Forms.CheckBox();
             this.stacksLabel = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.coopLabel = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.autoLabel = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.cerLabel = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.rankLabel = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.qaLabel = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.teamLookupDataGridView = new System.Windows.Forms.DataGridView();
             this.teamLookupBox = new System.Windows.Forms.TextBox();
             this.teamLookupButton = new System.Windows.Forms.Button();
@@ -356,6 +356,78 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // label19
+            // 
+            this.label19.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(133, 414);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 13);
+            this.label19.TabIndex = 17;
+            this.label19.Text = "STACK:";
+            this.toolTip1.SetToolTip(this.label19, "Avg stack value.");
+            // 
+            // label18
+            // 
+            this.label18.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(138, 389);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(40, 13);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "COOP:";
+            this.toolTip1.SetToolTip(this.label18, "Avg coop points for matches shown.");
+            // 
+            // label17
+            // 
+            this.label17.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(138, 365);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "AUTO:";
+            this.toolTip1.SetToolTip(this.label17, "Average auto points for matches shown.");
+            // 
+            // label15
+            // 
+            this.label15.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(4, 413);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(32, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "CER:";
+            this.toolTip1.SetToolTip(this.label15, "Can Efficiency Ratio");
+            // 
+            // label16
+            // 
+            this.label16.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(4, 365);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 17;
+            this.label16.Text = "RANK:";
+            this.toolTip1.SetToolTip(this.label16, "Rank");
+            // 
+            // label14
+            // 
+            this.label14.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(4, 389);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(28, 13);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "QA: ";
+            this.toolTip1.SetToolTip(this.label14, "Qualifying average for the shown matches.");
             // 
             // tickerTab
             // 
@@ -1264,18 +1336,6 @@
             this.stacksLabel.Text = "XXXX";
             this.stacksLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label19
-            // 
-            this.label19.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(133, 414);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 13);
-            this.label19.TabIndex = 17;
-            this.label19.Text = "STACK:";
-            this.toolTip1.SetToolTip(this.label19, "Avg stack value.");
-            // 
             // coopLabel
             // 
             this.coopLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
@@ -1288,18 +1348,6 @@
             this.coopLabel.TabIndex = 17;
             this.coopLabel.Text = "XXXX";
             this.coopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label18
-            // 
-            this.label18.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.Color.Black;
-            this.label18.Location = new System.Drawing.Point(138, 389);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(40, 13);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "COOP:";
-            this.toolTip1.SetToolTip(this.label18, "Avg coop points for matches shown.");
             // 
             // autoLabel
             // 
@@ -1314,18 +1362,6 @@
             this.autoLabel.Text = "XXXX";
             this.autoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label17
-            // 
-            this.label17.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(138, 365);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 13);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "AUTO:";
-            this.toolTip1.SetToolTip(this.label17, "Average auto points for matches shown.");
-            // 
             // cerLabel
             // 
             this.cerLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
@@ -1338,18 +1374,6 @@
             this.cerLabel.TabIndex = 17;
             this.cerLabel.Text = "XXXX";
             this.cerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label15
-            // 
-            this.label15.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(4, 413);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "CER:";
-            this.toolTip1.SetToolTip(this.label15, "Can Efficiency Ratio");
             // 
             // rankLabel
             // 
@@ -1364,18 +1388,6 @@
             this.rankLabel.Text = "XXXX";
             this.rankLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label16
-            // 
-            this.label16.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(4, 365);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 13);
-            this.label16.TabIndex = 17;
-            this.label16.Text = "RANK:";
-            this.toolTip1.SetToolTip(this.label16, "Rank");
-            // 
             // qaLabel
             // 
             this.qaLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
@@ -1388,18 +1400,6 @@
             this.qaLabel.TabIndex = 17;
             this.qaLabel.Text = "XXXX";
             this.qaLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label14
-            // 
-            this.label14.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(4, 389);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 13);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "QA: ";
-            this.toolTip1.SetToolTip(this.label14, "Qualifying average for the shown matches.");
             // 
             // teamLookupDataGridView
             // 
@@ -1492,6 +1492,7 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximumSize = new System.Drawing.Size(1320, 622);
             this.Name = "Form1";
             this.Text = "CC Helper 2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
