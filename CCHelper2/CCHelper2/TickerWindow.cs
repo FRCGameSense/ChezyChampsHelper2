@@ -21,7 +21,7 @@ namespace CCHelper2
         private void TickerWindow_Load(object sender, EventArgs e)
         {
             this.Location = Properties.Settings.Default.tickerWindowLocation;
-            axShockwaveFlash1.Movie = Path.Combine(Properties.Settings.Default.graphicsFolderLocation, "Rankings Ticker.swf");
+            axShockwaveFlash1.Movie = Path.Combine(Properties.Settings.Default.XsplitInstallLocation, "Rankings Ticker.swf");
             axShockwaveFlash1.Dock = DockStyle.Fill;
             axShockwaveFlash1.Play();
         }

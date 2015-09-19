@@ -58,3 +58,5 @@ C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\D
 C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\AxInterop.ShockwaveFlashObjects.dll
 C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.exe.manifest
 C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\obj\Debug\CCHelper2.application
+C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\Hammock.dll
+C:\Users\GameSense\Documents\GitHub\ChezyChampsHelper2\CCHelper2\CCHelper2\bin\Debug\Hammock.pdb

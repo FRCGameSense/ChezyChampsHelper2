@@ -382,9 +382,11 @@ namespace CCHelper2
                     selectedMatch = ccMatches.Find(i => i.Type == selectedRow.Cells["Type"].Value.ToString() && i.DisplayName == selectedRow.Cells["DisplayName"].Value.ToString());
                 }
 
-                string stackImagePath = generateStacksImageFromMatch(selectedMatch);
-
-                xsHandler.changeXMLTag("postMatchStackImagePath", stackImagePath);
+                if (selectedMatch.Result != null)
+                {
+                    string stackImagePath = generateStacksImageFromMatch(selectedMatch);
+                    xsHandler.changeXMLTag("postMatchStackImagePath", stackImagePath);
+                }
 
                 xsHandler.writeXMLFile();
             }
@@ -832,15 +834,15 @@ namespace CCHelper2
                     sb.AppendLine(row.ItemArray[0].ToString() + '\t' + row.ItemArray[1].ToString());
                 }
 
-                string backupFile = Path.Combine(Properties.Settings.Default.GSFolderLocation, "Documents", "GSQuestionsBackup.txt");
-
+                string backupFile = Path.Combine(Properties.Settings.Default.graphicsFolderLocation, "GSQuestionsBackup.txt");
+                
                 File.WriteAllText(backupFile, sb.ToString());
             }
         }
 
         private void Form1_Shown(object sender, EventArgs e)
         {
-            string questionsBackupFile = Path.Combine(Properties.Settings.Default.GSFolderLocation, "Documents", "GSQuestionsBackup.txt");
+            string questionsBackupFile = Path.Combine(Properties.Settings.Default.graphicsFolderLocation, "GSQuestionsBackup.txt");
             if (File.Exists(questionsBackupFile))
             {
                 DialogResult result = MessageBox.Show("Found a questions backup file. \n\nWould you like to import the backed up questions?", "Backup File Found", MessageBoxButtons.YesNo);
@@ -1196,7 +1198,7 @@ namespace CCHelper2
 
             foreach (CCApi.Ranking rank in rankings)
             {
-                xsHandler.changeXMLTag("Rank" + rank.Rank.ToString(), rank.ToString());
+                xsHandler.changeXMLTag("Rank" + rank.Rank.ToString(), rank.ToStringNoNumbers());
             }
 
             xsHandler.writeXMLFile();

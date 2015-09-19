@@ -76,6 +76,7 @@ namespace CCHelper2
             searchOptions.Resulttype = TwitterSearchResultType.Mixed;
             searchOptions.IncludeEntities = false;
             TwitterSearchResult tweets = service.Search(searchOptions);
+
             if (tweets != null)
             {
                 foreach (var tweet in tweets.Statuses)

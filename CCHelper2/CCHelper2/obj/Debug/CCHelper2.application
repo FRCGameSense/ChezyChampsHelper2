@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="CCHelper2.exe.manifest" size="7513">
+    <dependentAssembly dependencyType="install" codebase="CCHelper2.exe.manifest" size="8180">
       <assemblyIdentity name="CCHelper2.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>aWX9lNfrqKENr18G3+xCLzSnv8T7KDwnK/SgvLLkePY=</dsig:DigestValue>
+        <dsig:DigestValue>6M3mbD3HqkUZ7psSOa5jXGn2fhcXt9oUWBFRIkd7KUU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

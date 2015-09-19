@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>L2OX3pL/19Lvb18If6wQE+NLsa2z16OI/J4TK3pUwKY=</dsig:DigestValue>
+        <dsig:DigestValue>eGJSDqKR3JPhlb+9Zgay9oTMRMsXdJ8PBQSl4DwKJ/o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,7 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RD4MJyr8q2p0mFm/C052Yi6JRJYDMz20p+HeUKUninA=</dsig:DigestValue>
+        <dsig:DigestValue>jOBZ1xoMew1oqExV4oqGAY7hY0b/FOaznZBIqdIHWi8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Hammock.dll" size="203264">
+      <assemblyIdentity name="Hammock" version="1.0.0.0" publicKeyToken="C148CFBA29ED1A4D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>l8omQf792g0UkaCsErC6aHz8Ajsf/wZ9Wz4r8oQmOKY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,19 +97,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>PR/e3zpPZRKepi//OCKOzgqoXuwmgjxaQ7l6LFnUeKU=</dsig:DigestValue>
+        <dsig:DigestValue>CpI7t5KZpse35X/iMm8ZpS3SVzpPF37x+8FWyHwxgjc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="429056">
-      <assemblyIdentity name="Newtonsoft.Json" version="4.5.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="520192">
+      <assemblyIdentity name="Newtonsoft.Json" version="7.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MuYcgHQvNDegLb5j+R8Y5XPJJL3FYkbdd+LW1TfWlXI=</dsig:DigestValue>
+        <dsig:DigestValue>nsosXtGHteExnDWaq/g4KZITHv4YVLiZwjqT/iJ0luM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,24 +126,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TweetSharp.dll" size="230912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TweetSharp.dll" size="231424">
       <assemblyIdentity name="TweetSharp" version="2.0.0.0" publicKeyToken="C148CFBA29ED1A4D" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>As3S/H5sKVVfrBAIWItU2w/8Wtsv6D50CXiYYrq4eL0=</dsig:DigestValue>
+        <dsig:DigestValue>jGqpqrk4Qk1N7RT79RS9VKMy9aQDqT/X8LkXlf8AY9s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CCHelper2.exe.config" size="4153">
+  <file name="CCHelper2.exe.config" size="4505">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>3m2+uKfpke6Wo11L+3EPRkqvCKJoKQ3bkTYRhYwQ5Ok=</dsig:DigestValue>
+      <dsig:DigestValue>skCS3eZMXl0ZVAvgqJ1qr8OSjUFDTpTGMzXtJonx9o0=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
