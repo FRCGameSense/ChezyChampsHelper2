@@ -416,6 +416,44 @@ namespace CCHelper2
             public Foul() { }
         }
 
+        public class Ranking2016
+        {
+            public int TeamId { get; set; }
+            public int Rank { get; set; }
+            public int RankingPoints { get; set; }
+            public int AutoPoints { get; set; }
+            public int ScaleChallengePoints { get; set; }
+            public int GoalPoints { get; set; }
+            public int DefensePoints { get; set; }
+            public int Wins {get; set;}
+            public int Losses {get; set;}
+            public int Ties {get; set;}
+            public double Random { get; set; }
+            public int Disqualifications { get; set; }
+            public int Played { get; set; }
+            public string Nickname { get; set; }
+
+            public Ranking2016() { }
+
+            public override string ToString()
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendFormat("{0}. {1} ({2} RP, {3}-{4}-{5})", this.Rank.ToString(), this.TeamId.ToString(), this.RankingPoints, this.Wins, this.Losses, this.Ties);
+
+                return sb.ToString();
+            }
+
+            public string ToStringNoNumbers()
+            {
+                StringBuilder sb = new StringBuilder();
+
+                sb.AppendFormat("{0} ({1})", this.TeamId.ToString(), string.Format("{0:N2}", this.RankingPoints));
+
+                return sb.ToString();
+            }
+        }
+    
         public class Ranking
         {
             public int TeamId { get; set; }
@@ -454,6 +492,13 @@ namespace CCHelper2
             
         }
 
+        public class RankingsList2016
+        {
+            public List<Ranking2016> Rankings { get; set; }
+
+            public RankingsList2016() { }
+        }
+
         public class RankingsList
         {
             public List<Ranking> Rankings { get; set; }
@@ -471,6 +516,22 @@ namespace CCHelper2
             {
                 List<Match> matches = JsonConvert.DeserializeObject<List<Match>>(api_response);
                 return matches;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static List<Ranking2016> getRankings2016()
+        {
+            string uri = Properties.Settings.Default.apiUrl + "/rankings";
+            string api_response = Communicator.sendAndGetRawResponse(uri);
+
+            if (api_response != null)
+            {
+                List<Ranking2016> rankings = JsonConvert.DeserializeObject<RankingsList2016>(api_response).Rankings;
+                return rankings;
             }
             else
             {

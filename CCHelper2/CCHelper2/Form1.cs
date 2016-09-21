@@ -31,6 +31,7 @@ namespace CCHelper2
         Size toteSize = new Size(40, 24);
         Size containerSize = new Size(30, 64);
         Size noodleSize = new Size(5, 24);
+        private System.Windows.Forms.Timer tickerTimer;
 
         public Form1()
         {
@@ -97,6 +98,19 @@ namespace CCHelper2
                 settingsForm.ShowDialog();
             }
 
+            if (Properties.Settings.Default.firstInstall)
+            {
+                Properties.Settings.Default.firstInstall = false;
+                Properties.Settings.Default.Save();
+
+                //string xml = System.IO.Path.Combine(Properties.Settings.Default.GSFolderLocation, "Software", "streamcontrol_base.xml");
+                //xsHandler.copyStreamControlXMLToXsplitLocation(Properties.Settings.Default.XsplitInstallLocation);
+                //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_medium.tff", Properties.Resources.futura_lt_medium);
+                //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_light.tff", Properties.Resources.futura_lt_light);
+                //File.WriteAllBytes(@"C:\Windows\Fonts\futura_lt_heavy.tff", Properties.Resources.futura_lt_heavy);
+            }
+
+            /*
             if (!xsHandler.checkXsplitLocation(Properties.Settings.Default.XsplitInstallLocation))
             {
                 MessageBox.Show("Unable to locate XSplit installation in the location saved in settings, please go to Settings to locate manually.");
@@ -116,6 +130,7 @@ namespace CCHelper2
                 }
                 Properties.Settings.Default.Save();
             }
+             * */
 
             //load these from settings
             Host1ComboBox.Text = Properties.Settings.Default.Host1;
@@ -1172,17 +1187,18 @@ namespace CCHelper2
         private void getRankingsTickerButton_Click(object sender, EventArgs e)
         {
             updateRankingsTicker();
+            publishTicker();
         }
 
         private void updateRankingsTicker()
         {
             StringBuilder sb = new StringBuilder();
 
-            List<CCApi.Ranking> rankings = CCApi.getRankings();
+            List<CCApi.Ranking2016> rankings = CCApi.getRankings2016();
 
             if (rankings != null)
             {
-                foreach (CCApi.Ranking rank in rankings)
+                foreach (CCApi.Ranking2016 rank in rankings)
                 {
                     sb.AppendFormat("{0}  ", rank.ToString());
                 }
@@ -1528,6 +1544,34 @@ namespace CCHelper2
                 case "teamLookupTab":
                     break;
             }
+        }
+
+        private void autoUpdateRankingsCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (autoUpdateRankingsCheckbox.Checked)
+            {
+                InitTimer();
+            }
+            else
+            {
+                tickerTimer.Stop();
+
+            }
+        }
+
+        public void InitTimer()
+        {
+            tickerTimer = new System.Windows.Forms.Timer();
+            tickerTimer.Tick += new EventHandler(rankingsTimer_Tick);
+            tickerTimer.Interval = 10000; // in miliseconds
+            tickerTimer.Start();
+        }
+
+        private void rankingsTimer_Tick(object sender, EventArgs e)
+        {
+            Console.WriteLine("Updating Ticker");
+            updateRankingsTicker();
+            publishTicker();
         }
 
 

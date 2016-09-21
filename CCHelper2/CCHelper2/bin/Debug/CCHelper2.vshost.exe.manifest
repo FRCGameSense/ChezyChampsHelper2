@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CCHelper2.exe" size="569856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CCHelper2.exe" size="579584">
       <assemblyIdentity name="CCHelper2" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jOBZ1xoMew1oqExV4oqGAY7hY0b/FOaznZBIqdIHWi8=</dsig:DigestValue>
+        <dsig:DigestValue>5UVwuiEmFdoJniKiEVXv0vGvQiL7FopZWrtwoGKoyXg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.ShockwaveFlashObjects.dll" size="22528">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.ShockwaveFlashObjects.dll" size="23040">
       <assemblyIdentity name="Interop.ShockwaveFlashObjects" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>CpI7t5KZpse35X/iMm8ZpS3SVzpPF37x+8FWyHwxgjc=</dsig:DigestValue>
+        <dsig:DigestValue>/gFIBve0UGVnDqimY1YKEBe3TGmvywQtVHjIo+drwvg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

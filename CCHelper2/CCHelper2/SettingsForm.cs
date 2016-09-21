@@ -45,6 +45,21 @@ namespace CCHelper2
             Properties.Settings.Default.botPicsLocation = botPicsLocationBox.Text;
             Properties.Settings.Default.enablePublishButton = enablePublishButtonCheckBox.Checked;
             Properties.Settings.Default.Save();
+
+            //string streamcontrolPath = Path.Combine(, "streamcontrol.xml");
+            if (!File.Exists(Properties.Settings.Default.XsplitInstallLocation))
+            {
+                try
+                    {
+                        xsHandler.copyStreamControlXMLToXsplitLocation(Properties.Settings.Default.XsplitInstallLocation);
+                        //MessageBox.Show("Success!\n\nstreamcontrol.xml succesfully overwritten.");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(String.Format("Unable to write {0}. \n\n{1}", Properties.Settings.Default.XsplitInstallLocation, ex.Message));
+                    }
+            }
+
             this.Close();
         }
 

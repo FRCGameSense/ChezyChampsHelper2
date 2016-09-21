@@ -149,6 +149,7 @@
             this.teamLookupBox = new System.Windows.Forms.TextBox();
             this.teamLookupButton = new System.Windows.Forms.Button();
             this.teamLookupPictureBox = new System.Windows.Forms.PictureBox();
+            this.autoUpdateRankingsCheckbox = new System.Windows.Forms.CheckBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalTickerDataGridView)).BeginInit();
             this.tickerTab.SuspendLayout();
@@ -432,6 +433,7 @@
             // tickerTab
             // 
             this.tickerTab.BackColor = System.Drawing.Color.DarkGray;
+            this.tickerTab.Controls.Add(this.autoUpdateRankingsCheckbox);
             this.tickerTab.Controls.Add(this.launchTickerWindowButton);
             this.tickerTab.Controls.Add(this.getRankingsTickerButton);
             this.tickerTab.Controls.Add(this.label13);
@@ -455,7 +457,7 @@
             this.launchTickerWindowButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
             this.launchTickerWindowButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.launchTickerWindowButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.launchTickerWindowButton.Location = new System.Drawing.Point(886, 185);
+            this.launchTickerWindowButton.Location = new System.Drawing.Point(886, 71);
             this.launchTickerWindowButton.Name = "launchTickerWindowButton";
             this.launchTickerWindowButton.Size = new System.Drawing.Size(222, 33);
             this.launchTickerWindowButton.TabIndex = 9;
@@ -471,7 +473,7 @@
             this.getRankingsTickerButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
             this.getRankingsTickerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.getRankingsTickerButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.getRankingsTickerButton.Location = new System.Drawing.Point(886, 146);
+            this.getRankingsTickerButton.Location = new System.Drawing.Point(886, 188);
             this.getRankingsTickerButton.Name = "getRankingsTickerButton";
             this.getRankingsTickerButton.Size = new System.Drawing.Size(222, 33);
             this.getRankingsTickerButton.TabIndex = 9;
@@ -514,7 +516,7 @@
             this.nextWeeksResultsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
             this.nextWeeksResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextWeeksResultsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.nextWeeksResultsButton.Location = new System.Drawing.Point(886, 107);
+            this.nextWeeksResultsButton.Location = new System.Drawing.Point(886, 149);
             this.nextWeeksResultsButton.Name = "nextWeeksResultsButton";
             this.nextWeeksResultsButton.Size = new System.Drawing.Size(222, 33);
             this.nextWeeksResultsButton.TabIndex = 6;
@@ -531,7 +533,7 @@
             this.lastWeeksResultsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(87)))), ((int)(((byte)(105)))));
             this.lastWeeksResultsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lastWeeksResultsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(97)))), ((int)(((byte)(22)))));
-            this.lastWeeksResultsButton.Location = new System.Drawing.Point(886, 68);
+            this.lastWeeksResultsButton.Location = new System.Drawing.Point(886, 110);
             this.lastWeeksResultsButton.Name = "lastWeeksResultsButton";
             this.lastWeeksResultsButton.Size = new System.Drawing.Size(222, 33);
             this.lastWeeksResultsButton.TabIndex = 6;
@@ -1475,6 +1477,17 @@
             this.teamLookupPictureBox.TabIndex = 0;
             this.teamLookupPictureBox.TabStop = false;
             // 
+            // autoUpdateRankingsCheckbox
+            // 
+            this.autoUpdateRankingsCheckbox.AutoSize = true;
+            this.autoUpdateRankingsCheckbox.Location = new System.Drawing.Point(886, 227);
+            this.autoUpdateRankingsCheckbox.Name = "autoUpdateRankingsCheckbox";
+            this.autoUpdateRankingsCheckbox.Size = new System.Drawing.Size(134, 17);
+            this.autoUpdateRankingsCheckbox.TabIndex = 10;
+            this.autoUpdateRankingsCheckbox.Text = "Auto Update Rankings";
+            this.autoUpdateRankingsCheckbox.UseVisualStyleBackColor = true;
+            this.autoUpdateRankingsCheckbox.CheckedChanged += new System.EventHandler(this.autoUpdateRankingsCheckbox_CheckedChanged);
+            // 
             // Form1
             // 
             this.AcceptButton = this.teamLookupButton;
@@ -1618,6 +1631,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label autoLabel;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox autoUpdateRankingsCheckbox;
     }
 }
 
